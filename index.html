@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Wild Window</title>
+  <meta name="description" content="Search and watch free animal livestreams from around the world.">
+  <meta name="theme-color" content="#fbf3e4">
+
+  <!-- iPhone home-screen app -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Wild Window">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="icons/favicon-32.png">
+  <link rel="manifest" href="manifest.webmanifest">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Nunito:wght@500;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-view="browse">
+
+  <!-- ============ BROWSE ============ -->
+  <main class="browse" id="browse">
+    <svg class="moon" aria-hidden="true" viewBox="0 0 120 120">
+      <circle cx="60" cy="60" r="34" fill="#f6d58e"/>
+      <circle cx="72" cy="50" r="30" fill="var(--paper)"/>
+      <path d="M20 30l3 6 6 3-6 3-3 6-3-6-6-3 6-3z" fill="#e8b04b"/>
+      <path d="M96 98l2 4 4 2-4 2-2 4-2-4-4-2 4-2z" fill="#e8b04b"/>
+    </svg>
+
+    <header class="hero">
+      <div class="hero-top">
+        <p class="greeting" id="greeting">Hello, explorer</p>
+        <button class="icon-btn" id="open-settings" aria-label="Settings and adding cams">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>
+        </button>
+      </div>
+      <h1 id="headline">Who's awake<br>in the wild tonight?</h1>
+    </header>
+
+    <form class="search" id="search-form" role="search" autocomplete="off">
+      <label for="q" class="sr-only">Search animals or places</label>
+      <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input id="q" type="search" enterkeyhint="search" placeholder="Search owls, penguins, Kenya…" spellcheck="false">
+      <button type="button" class="clear" id="clear-q" aria-label="Clear search" hidden>
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </form>
+
+    <nav class="chips" id="chips" aria-label="Filter cams"></nav>
+
+    <svg class="squiggle" aria-hidden="true" viewBox="0 0 342 14" preserveAspectRatio="none"><path d="M0 7 Q 9.5 0 19 7 T 38 7 T 57 7 T 76 7 T 95 7 T 114 7 T 133 7 T 152 7 T 171 7 T 190 7 T 209 7 T 228 7 T 247 7 T 266 7 T 285 7 T 304 7 T 323 7 T 342 7"/></svg>
+
+    <p class="count" id="count" aria-live="polite"></p>
+    <section class="grid" id="grid" aria-label="Cams"></section>
+
+    <section class="found" id="found" hidden>
+      <h2>More live cams from YouTube</h2>
+      <p class="found-note" id="found-note"></p>
+      <div class="grid" id="found-grid"></div>
+    </section>
+
+    <div class="bottom-space"></div>
+  </main>
+
+  <!-- ============ WATCH (full screen, shrinks to a mini player) ============ -->
+  <section class="watch" id="watch" aria-label="Now watching" hidden>
+    <div class="watch-bar">
+      <button class="icon-btn" id="minimize" aria-label="Shrink to mini player">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <span class="watch-bar-title">Now watching</span>
+      <button class="icon-btn" id="close-watch" aria-label="Stop watching">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+
+    <div class="stage" id="stage">
+      <div class="stage-frame" id="stage-frame"></div>
+      <div class="stage-overlay" id="stage-loading">
+        <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span>tiptoeing in…</span>
+      </div>
+      <div class="stage-overlay nap" id="stage-error" hidden>
+        <strong>This cam is napping</strong>
+        <span id="stage-error-text">The stream ended or moved to a new link.</span>
+        <div class="nap-actions">
+          <button class="pill-btn" id="err-find" hidden>Find its new stream</button>
+          <button class="pill-btn ghost" id="err-another">Try another cam</button>
+        </div>
+      </div>
+      <!-- tap target that expands the mini player -->
+      <button class="mini-expand" id="mini-expand" aria-label="Open the full player"></button>
+    </div>
+
+    <!-- mini player row -->
+    <div class="mini-info">
+      <span class="mini-title" id="mini-title"></span>
+      <span class="mini-sub" id="mini-sub">watching quietly…</span>
+    </div>
+    <button class="mini-music" id="mini-music" aria-label="My music mode" aria-pressed="false">
+      <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="3" y="14" width="5" height="7" rx="2"/><rect x="16" y="14" width="5" height="7" rx="2"/></svg>
+    </button>
+    <button class="mini-close" id="mini-close" aria-label="Stop watching">
+      <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+
+    <div class="watch-body">
+      <div class="watch-meta">
+        <span class="live-pill" id="w-live">● live cam</span>
+        <span class="local-time" id="w-time"></span>
+      </div>
+      <h2 class="watch-title" id="w-title"></h2>
+      <p class="watch-place" id="w-place"></p>
+
+      <div class="sound" role="group" aria-label="What you hear">
+        <button class="sound-opt" id="sound-cam" aria-pressed="true">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 10v4h4l5 4V6L8 10z"/><path d="M16.5 9a4 4 0 0 1 0 6M19 6.5a8 8 0 0 1 0 11"/></svg>
+          <span>Cam sound</span>
+        </button>
+        <button class="sound-opt" id="sound-music" aria-pressed="false">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="3" y="14" width="5" height="7" rx="2"/><rect x="16" y="14" width="5" height="7" rx="2"/></svg>
+          <span>My music</span>
+        </button>
+      </div>
+      <p class="sound-hint" id="sound-hint"></p>
+
+      <div class="watch-actions">
+        <button class="pill-btn ghost" id="w-save" aria-pressed="false">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"/></svg>
+          <span>Save</span>
+        </button>
+        <button class="pill-btn ghost" id="w-share">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3v12M7 8l5-5 5 5"/><path d="M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></svg>
+          <span>Share</span>
+        </button>
+      </div>
+
+      <p class="watch-blurb" id="w-blurb"></p>
+
+      <h3 class="more-title">More friends to visit</h3>
+      <div class="more-row" id="w-more"></div>
+    </div>
+  </section>
+
+  <!-- ============ SETTINGS SHEET ============ -->
+  <div class="sheet-backdrop" id="sheet-backdrop" hidden></div>
+  <section class="sheet" id="settings" role="dialog" aria-modal="true" aria-labelledby="settings-title" hidden>
+    <div class="sheet-handle" aria-hidden="true"></div>
+    <div class="sheet-head">
+      <h2 id="settings-title">Your cam drawer</h2>
+      <button class="icon-btn" id="close-settings" aria-label="Close">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+
+    <form class="field-group" id="add-form">
+      <h3>Add a cam</h3>
+      <p class="help">Paste a YouTube live stream link. It'll show up in your search and under Saved.</p>
+      <label for="add-url">YouTube link</label>
+      <input id="add-url" type="url" inputmode="url" placeholder="https://www.youtube.com/watch?v=…" required>
+      <label for="add-name">Name it</label>
+      <input id="add-name" type="text" placeholder="Sleepy sloths" maxlength="60">
+      <button class="pill-btn" type="submit">Add to my cams</button>
+      <p class="form-msg" id="add-msg" role="status"></p>
+    </form>
+
+    <div class="my-cams" id="my-cams"></div>
+
+    <form class="field-group" id="key-form">
+      <h3>Search all of YouTube <span class="opt">optional</span></h3>
+      <p class="help">Add a free YouTube Data API key to see which cams are live right now and to find new live animal cams beyond the built-in list. The key stays on this device.</p>
+      <label for="api-key">YouTube API key</label>
+      <input id="api-key" type="text" placeholder="AIza…" autocapitalize="off" spellcheck="false">
+      <div class="row">
+        <button class="pill-btn" type="submit">Save key</button>
+        <button class="pill-btn ghost" type="button" id="remove-key">Remove</button>
+      </div>
+      <p class="form-msg" id="key-msg" role="status"></p>
+    </form>
+  </section>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/streams.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
