@@ -188,13 +188,62 @@ svg { display: block; }
 }
 .badge.live { color: #a8412b; }
 .badge.nap { color: var(--muted); }
-.saved-dot {
-  position: absolute; right: 8px; top: 8px;
-  width: 26px; height: 26px; border-radius: 13px;
-  background: var(--paper-2);
+/* heart on each card: sits on the thumbnail's bottom-right corner */
+.card-wrap {
+  position: relative;
+  container-type: inline-size;
+  animation: pop .35s ease both;
+}
+.card-wrap .card { animation: none; width: 100%; }
+.fav-btn {
+  position: absolute; right: 2px;
+  top: calc(78cqw - 48px);
+  width: 46px; height: 46px; padding: 0;
+  border: 0; background: transparent;
   display: flex; align-items: center; justify-content: center;
 }
-.saved-dot svg { width: 14px; height: 14px; fill: var(--accent); stroke: none; }
+.fav-btn::before {
+  content: ""; position: absolute; inset: 7px;
+  border-radius: 50%;
+  background: var(--paper-2);
+  box-shadow: 0 2px 0 rgba(61,46,42,.18);
+  transition: transform .15s ease;
+}
+.fav-btn:active::before { transform: scale(.9); }
+.fav-btn svg {
+  position: relative; width: 18px; height: 18px;
+  fill: none; stroke: var(--ink); stroke-width: 2.3; stroke-linejoin: round;
+  transition: fill .15s ease, stroke .15s ease;
+}
+.fav-btn[aria-pressed="true"] svg { fill: var(--accent); stroke: var(--accent); }
+.fav-btn.burst svg, .pill-btn.burst svg { animation: heart-pop .5s cubic-bezier(.2,1.6,.4,1) both; }
+.fav-btn.burst::after, .pill-btn.burst::after {
+  content: ""; position: absolute; inset: 9px; border-radius: 50%;
+  border: 2px solid var(--accent);
+  animation: heart-ring .55s ease-out both;
+  pointer-events: none;
+}
+#w-save { position: relative; }
+#w-save.burst::after { inset: auto; left: 14px; width: 26px; height: 26px; }
+
+/* favorites shelf on the home screen */
+.favs { margin: 6px 0 18px; }
+.favs h2 {
+  display: flex; align-items: center; gap: 8px;
+  margin: 8px var(--gutter) 12px;
+  font-family: var(--serif); font-weight: 400; font-size: 21px;
+}
+.favs h2 svg { width: 20px; height: 20px; fill: var(--accent); }
+.favs-row { margin: 0; padding: 0 var(--gutter) 6px; }
+.chip-count {
+  min-width: 22px; height: 22px; padding: 0 6px;
+  border-radius: 11px; background: var(--sand); color: var(--ink);
+  font-size: 12px; font-weight: 800;
+  display: inline-flex; align-items: center; justify-content: center;
+}
+.chip[aria-pressed="true"] .chip-count { background: rgba(255,255,255,.25); color: #fff; }
+.fav-chip svg { fill: none; }
+.fav-chip[aria-pressed="true"] svg { fill: currentColor; }
 .card-title {
   margin-top: 9px;
   font-family: var(--serif); font-size: 16.5px; line-height: 1.2; color: var(--ink);
@@ -456,6 +505,8 @@ body[data-view="mini"] .toast { bottom: calc(100px + var(--safe-bottom)); }
 @keyframes rise { from { transform: translateY(24px); opacity: 0; } to { transform: none; opacity: 1; } }
 @keyframes fade { from { opacity: 0; } to { opacity: 1; } }
 @keyframes toast { from { opacity: 0; transform: translate(-50%, 8px); } to { opacity: 1; transform: translate(-50%, 0); } }
+@keyframes heart-pop { 0% { transform: scale(.6); } 60% { transform: scale(1.35); } 100% { transform: scale(1); } }
+@keyframes heart-ring { from { transform: scale(.6); opacity: 1; } to { transform: scale(1.9); opacity: 0; } }
 @keyframes hop { 0%, 100% { transform: translateY(0); opacity: .6; } 50% { transform: translateY(-6px); opacity: 1; } }
 
 @media (prefers-reduced-motion: reduce) {

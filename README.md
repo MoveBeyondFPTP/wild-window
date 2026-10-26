@@ -8,7 +8,8 @@ A cozy little web app for finding and watching free animal livestreams — owls,
 - Categories, plus **Daylight now** to show cams where it's light out
 - Streams play inside the app, with a mini player so you can keep browsing
 - **My music** button: keeps the cam silent so your own music keeps playing
-- Save favorites, add your own YouTube cams, share a cam with a link
+- Heart any cam to add it to your favorites — they live on a "Your favorites" shelf at the top and under the Favorites filter
+- Add your own YouTube cams, share a cam with a link
 - Optional YouTube key for live/offline badges and searching all of YouTube
 
 No build step and no accounts — it's plain HTML, CSS and JavaScript.
@@ -52,7 +53,7 @@ On the watch screen, switch from **Cam sound** to **My music** (or tap the headp
 
 ## Adding your own cams
 
-Tap the **gear** icon → **Add a cam**, paste a YouTube live stream link, and give it a name. It appears in search and under **Saved**, stored on your phone.
+Tap the **gear** icon → **Add a cam**, paste a YouTube live stream link, and give it a name. It appears in search and in your **Favorites**, stored on your phone.
 
 To add cams for everyone who uses your link, edit `js/streams.js` and add an entry (the file explains each field).
 

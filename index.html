@@ -55,6 +55,14 @@
 
     <svg class="squiggle" aria-hidden="true" viewBox="0 0 342 14" preserveAspectRatio="none"><path d="M0 7 Q 9.5 0 19 7 T 38 7 T 57 7 T 76 7 T 95 7 T 114 7 T 133 7 T 152 7 T 171 7 T 190 7 T 209 7 T 228 7 T 247 7 T 266 7 T 285 7 T 304 7 T 323 7 T 342 7"/></svg>
 
+    <section class="favs" id="favs" aria-labelledby="favs-title" hidden>
+      <h2 id="favs-title">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"/></svg>
+        Your favorites
+      </h2>
+      <div class="more-row favs-row" id="favs-row"></div>
+    </section>
+
     <p class="count" id="count" aria-live="polite"></p>
     <section class="grid" id="grid" aria-label="Cams"></section>
 
@@ -132,7 +140,7 @@
       <div class="watch-actions">
         <button class="pill-btn ghost" id="w-save" aria-pressed="false">
           <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"/></svg>
-          <span>Save</span>
+          <span>Favorite</span>
         </button>
         <button class="pill-btn ghost" id="w-share">
           <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3v12M7 8l5-5 5 5"/><path d="M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></svg>
@@ -160,7 +168,7 @@
 
     <form class="field-group" id="add-form">
       <h3>Add a cam</h3>
-      <p class="help">Paste a YouTube live stream link. It'll show up in your search and under Saved.</p>
+      <p class="help">Paste a YouTube live stream link. It'll show up in your search and in your favorites.</p>
       <label for="add-url">YouTube link</label>
       <input id="add-url" type="url" inputmode="url" placeholder="https://www.youtube.com/watch?v=…" required>
       <label for="add-name">Name it</label>

@@ -151,7 +151,7 @@
   function filteredCams() {
     const tokens = words(state.query);
     let list = allCams();
-    if (state.cat === "saved") list = list.filter((c) => state.saved.has(c.id) || c.mine);
+    if (state.cat === "saved") list = list.filter((c) => state.saved.has(c.id));
     else if (state.cat !== "all") list = list.filter((c) => c.cat === state.cat);
     if (state.daylight) list = list.filter(isDaylight);
     return list
@@ -184,16 +184,81 @@
       ? `<img loading="lazy" alt="" src="https://i.ytimg.com/vi/${esc(cam.yt)}/hqdefault_live.jpg" data-fallback="https://i.ytimg.com/vi/${esc(cam.yt)}/hqdefault.jpg">`
       : "";
     const doodle = `<svg class="doodle" aria-hidden="true" viewBox="0 0 24 24">${DOODLES[cam.cat] || DOODLES.zoo}</svg>`;
-    const saved = state.saved.has(cam.id)
-      ? '<span class="saved-dot" aria-label="Saved"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"/></svg></span>'
-      : "";
     const time = localTime(cam.tz);
     const meta = esc(cam.place || "") + (time ? ` <span class="nowrap">· ${esc(time)}</span>` : "");
-    return `<button class="card" data-id="${esc(cam.id)}">
-      <span class="thumb" style="--tone:${esc(cam.tone || TONES[0])}">${doodle}${img}${badgeFor(cam)}${saved}</span>
-      <span class="card-title">${esc(cam.title)}</span>
-      <span class="card-meta">${meta}</span>
+    return `<div class="card-wrap">
+      <button class="card" data-id="${esc(cam.id)}">
+        <span class="thumb" style="--tone:${esc(cam.tone || TONES[0])}">${doodle}${img}${badgeFor(cam)}</span>
+        <span class="card-title">${esc(cam.title)}</span>
+        <span class="card-meta">${meta}</span>
+      </button>
+      ${favButtonHTML(cam)}
+    </div>`;
+  }
+
+  /* -------------------------------------------------------------- favorites (hearts) */
+  const HEART = '<path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"/>';
+  const isFav = (cam) => state.saved.has(cam.id);
+  const favLabel = (cam, on) => on ? `Remove ${cam.title} from favorites` : `Add ${cam.title} to favorites`;
+
+  function favButtonHTML(cam) {
+    const on = isFav(cam);
+    return `<button class="fav-btn" data-fav="${esc(cam.id)}" aria-pressed="${on}" aria-label="${esc(favLabel(cam, on))}">
+      <svg aria-hidden="true" viewBox="0 0 24 24">${HEART}</svg>
     </button>`;
+  }
+
+  function favoriteCams() {
+    const order = [...state.saved].reverse(); // newest heart first
+    const byId = new Map(allCams().map((c) => [c.id, c]));
+    return order.map((id) => byId.get(id)).filter(Boolean);
+  }
+
+  function toggleFav(cam) {
+    const on = !isFav(cam);
+    if (on) {
+      state.saved.add(cam.id);
+      // Cams found through YouTube search aren't in the built-in list, so keep a copy.
+      if (cam.found && !state.myCams.some((c) => c.id === cam.id)) {
+        state.myCams.unshift({ ...cam, found: false, mine: true, fromSearch: true, cat: "mine" });
+      }
+    } else {
+      state.saved.delete(cam.id);
+      state.myCams = state.myCams.filter((c) => !(c.id === cam.id && c.fromSearch));
+    }
+    store.set("saved", [...state.saved]);
+    store.set("myCams", state.myCams);
+
+    // Update every heart for this cam in place, so the little pop animation shows.
+    document.querySelectorAll(".fav-btn").forEach((b) => {
+      if (b.dataset.fav !== cam.id) return;
+      b.setAttribute("aria-pressed", String(on));
+      b.setAttribute("aria-label", favLabel(cam, on));
+      b.classList.remove("burst");
+      if (on) { void b.offsetWidth; b.classList.add("burst"); }
+    });
+    if (state.current && state.current.id === cam.id) updateWatchFav(on, true);
+
+    toast(on ? `${cam.title} is in your favorites` : "Removed from favorites");
+    renderChips();
+    renderFavs();
+    if (state.cat === "saved") setTimeout(render, on ? 0 : 380);
+  }
+
+  function updateWatchFav(on, animate) {
+    const btn = $("#w-save");
+    btn.setAttribute("aria-pressed", String(on));
+    $("#w-save span").textContent = on ? "Favorited" : "Favorite";
+    btn.classList.remove("burst");
+    if (on && animate) { void btn.offsetWidth; btn.classList.add("burst"); }
+  }
+
+  function renderFavs() {
+    const box = $("#favs");
+    const favs = favoriteCams();
+    const show = favs.length > 0 && !state.query.trim() && state.cat === "all";
+    box.hidden = !show;
+    if (show) $("#favs-row").innerHTML = favs.map(cardHTML).join("");
   }
 
   // Swap to a backup thumbnail, then give up and show the pastel doodle.
@@ -215,19 +280,21 @@
   /* -------------------------------------------------------------- chips */
   const CHIPS = [
     { id: "all", label: "All" },
+    { id: "saved", label: "Favorites", icon: '<path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"/>' },
     { id: "birds", label: "Birds" },
     { id: "ocean", label: "Ocean" },
     { id: "safari", label: "Safari" },
     { id: "zoo", label: "Zoo" },
-    { id: "cuddly", label: "Cuddly" },
-    { id: "saved", label: "Saved", icon: '<path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"/>' }
+    { id: "cuddly", label: "Cuddly" }
   ];
   function renderChips() {
     const sun = '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>';
+    const favCount = favoriteCams().length;
     $("#chips").innerHTML =
       `<button class="chip" data-daylight aria-pressed="${state.daylight}"><svg aria-hidden="true" viewBox="0 0 24 24">${sun}</svg>Daylight now</button>` +
-      CHIPS.map((c) => `<button class="chip" data-cat="${c.id}" aria-pressed="${state.cat === c.id}">${
-        c.icon ? `<svg aria-hidden="true" viewBox="0 0 24 24">${c.icon}</svg>` : ""}${c.label}</button>`).join("");
+      CHIPS.map((c) => `<button class="chip${c.id === "saved" ? " fav-chip" : ""}" data-cat="${c.id}" aria-pressed="${state.cat === c.id}">${
+        c.icon ? `<svg aria-hidden="true" viewBox="0 0 24 24">${c.icon}</svg>` : ""}${c.label}${
+        c.id === "saved" && favCount ? ` <span class="chip-count">${favCount}</span>` : ""}</button>`).join("");
   }
 
   /* -------------------------------------------------------------- render */
@@ -241,7 +308,7 @@
         ? `<button class="pill-btn" data-yt-search>Search YouTube for “${esc(q)}”</button>`
         : "";
       const emptyMsg = state.cat === "saved" && !q
-        ? "<strong>No saved friends yet</strong><p>Tap Save on any cam to keep it here.</p>"
+        ? "<strong>No favorites yet</strong><p>Tap the heart on any cam and it'll live here.</p>"
         : `<strong>No one's home by that name</strong><p>Try one of these instead:</p>`;
       const suggestions = ["owl", "penguin", "panda", "jelly", "kitten"]
         .map((s) => `<button class="chip" data-suggest="${s}">${s}</button>`).join("");
@@ -253,11 +320,12 @@
     let countText;
     if (!list.length) countText = "";
     else if (q) countText = `${list.length} ${list.length === 1 ? "friend" : "friends"} found`;
-    else if (state.cat === "saved") countText = `${list.length} saved ${list.length === 1 ? "friend" : "friends"}`;
+    else if (state.cat === "saved") countText = `${list.length} favorite ${list.length === 1 ? "friend" : "friends"}`;
     else countText = `${list.length} cams to peek into`;
     if (state.daylight && list.length) countText += " · in daylight now";
     $("#count").textContent = countText;
 
+    renderFavs();
     renderFound();
   }
 
@@ -558,9 +626,7 @@
     $("#w-blurb").textContent = cam.blurb || "";
     $("#w-blurb").hidden = !cam.blurb;
 
-    const saved = state.saved.has(cam.id);
-    $("#w-save").setAttribute("aria-pressed", String(saved));
-    $("#w-save span").textContent = saved ? "Saved" : "Save";
+    updateWatchFav(isFav(cam), false);
 
     const more = allCams()
       .filter((c) => c.id !== cam.id && (c.cat === cam.cat || cam.cat === "found" || cam.cat === "mine"))
@@ -597,25 +663,6 @@
   }
 
   /* -------------------------------------------------------------- save & share */
-  function toggleSave(cam) {
-    if (state.saved.has(cam.id)) {
-      state.saved.delete(cam.id);
-      if (cam.found) state.myCams = state.myCams.filter((c) => c.id !== cam.id);
-      toast("Removed from Saved");
-    } else {
-      state.saved.add(cam.id);
-      if (cam.found && !state.myCams.some((c) => c.id === cam.id)) {
-        state.myCams.unshift({ ...cam, found: false, mine: true, cat: "mine" });
-      }
-      toast("Saved. Find it under Saved.");
-    }
-    store.set("saved", [...state.saved]);
-    store.set("myCams", state.myCams);
-    fillWatch(cam);
-    render();
-    renderMyCams();
-  }
-
   async function share(cam) {
     const url = location.href;
     const data = { title: `${cam.title} · Wild Window`, text: `Peek at the ${cam.title} live cam`, url };
@@ -722,6 +769,12 @@
 
   // Cards anywhere (grid, YouTube results, "more friends" row)
   document.addEventListener("click", (e) => {
+    const heart = e.target.closest(".fav-btn[data-fav]");
+    if (heart) {
+      const cam = findCam(heart.dataset.fav);
+      if (cam) toggleFav(cam);
+      return;
+    }
     const card = e.target.closest(".card[data-id]");
     if (card) { openCam(findCam(card.dataset.id)); return; }
     const sug = e.target.closest("[data-suggest]");
@@ -758,7 +811,7 @@
   $("#sound-music").addEventListener("click", () => { if (!state.musicMode) setMusicMode(true); });
   $("#mini-music").addEventListener("click", () => setMusicMode(!state.musicMode));
 
-  $("#w-save").addEventListener("click", () => state.current && toggleSave(state.current));
+  $("#w-save").addEventListener("click", () => state.current && toggleFav(state.current));
   $("#w-share").addEventListener("click", () => state.current && share(state.current));
 
   $("#err-another").addEventListener("click", () => {
