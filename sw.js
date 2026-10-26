@@ -1,6 +1,6 @@
 /* Wild Window service worker: lets the app open instantly from the home screen.
    Live video always comes straight from YouTube and is never cached. */
-const CACHE = "wild-window-v1";
+const CACHE = "wild-window-v2";
 const SHELL = [
   "./",
   "index.html",

@@ -428,6 +428,13 @@ body[data-view="mini"] .mini-music[aria-pressed="true"] { background: var(--acce
   display: flex; align-items: center; gap: 12px;
   padding: 10px 0; border-bottom: 2px dotted var(--line);
 }
+.hidden-note { margin-top: 14px; }
+.link-btn {
+  border: 0; background: none; padding: 0;
+  color: #a8412b; font: 800 13.5px var(--sans);
+  text-decoration: underline; text-underline-offset: 3px;
+  min-height: 44px;
+}
 .my-cam span { flex: 1; min-width: 0; font-family: var(--serif); font-size: 16px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
 /* ---------- toast ---------- */

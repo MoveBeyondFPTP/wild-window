@@ -82,7 +82,7 @@ The free allowance is 10,000 units a day. Live badges cost about 1 unit per chec
 
 - **Streams sometimes move.** Broadcasters occasionally restart a stream with a new link. When that happens the cam shows "This cam is napping." Fix it by pasting the new video ID into `js/streams.js`, or let the API key find it for you.
 - **Seasons matter.** Some cams only run part of the year (nesting season, migrations), and night cams can look dark — try **Daylight now**.
-- **Some broadcasters block embedding.** Those cams can't play inside any app, so they aren't included.
+- **Some broadcasters block embedding.** If a cam turns out to block in-app playback, the app hides it automatically and never shows it again. With a YouTube key it checks ahead of time, so you usually never see one. (Gear icon → "Check again" brings hidden cams back if a broadcaster changes their mind.)
 - Videos are played through YouTube's official embedded player, so the streams' owners keep their views and credit.
 
 ## Files

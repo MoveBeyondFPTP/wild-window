@@ -40,6 +40,7 @@
     musicMode: store.get("musicMode", false),
     apiKey: store.get("apiKey", "") || config.youtubeApiKey || "",
     live: {},            // youtube id -> "live" | "off" | "gone"
+    blocked: store.get("blocked", {}), // cams that can't play in the app -> hidden everywhere
     found: [],           // results from a YouTube search
     current: null,
     player: null,
@@ -47,8 +48,19 @@
     view: "browse"
   };
 
-  const allCams = () => [...state.myCams, ...CAMS];
+  const camKey = (c) => c.yt || (c.channel ? "ch:" + c.channel : c.id);
+  const isBlocked = (c) => Boolean(state.blocked[camKey(c)]);
+  const allCams = () => [...state.myCams, ...CAMS].filter((c) => !isBlocked(c));
   const findCam = (id) => allCams().find((c) => c.id === id) || state.found.find((c) => c.id === id);
+
+  // Hide a cam everywhere once we learn it can't play inside the app.
+  function blockCam(cam) {
+    if (!cam || isBlocked(cam)) return;
+    state.blocked[camKey(cam)] = Date.now();
+    store.set("blocked", state.blocked);
+    state.found = state.found.filter((c) => !isBlocked(c));
+    render();
+  }
 
   /* -------------------------------------------------------------- time */
   const localTime = (tz) => {
@@ -289,14 +301,21 @@
     try {
       for (let i = 0; i < ids.length; i += 50) {
         const chunk = ids.slice(i, i + 50);
-        const data = await ytApi("videos", { part: "snippet", id: chunk.join(","), maxResults: 50 });
+        const data = await ytApi("videos", { part: "snippet,status", id: chunk.join(","), maxResults: 50 });
         const seen = new Set();
         for (const item of data.items || []) {
           seen.add(item.id);
           state.live[item.id] = item.snippet.liveBroadcastContent === "live" ? "live" : "off";
+          // Embedding turned off, or not public: it can't play here, so hide it.
+          const st = item.status || {};
+          if (st.embeddable === false || (st.privacyStatus && st.privacyStatus !== "public" && st.privacyStatus !== "unlisted")) {
+            state.blocked[item.id] = Date.now();
+          }
         }
-        chunk.forEach((id) => { if (!seen.has(id)) state.live[id] = "gone"; });
+        // Videos YouTube no longer knows about (deleted or private) can't play either.
+        chunk.forEach((id) => { if (!seen.has(id)) { state.live[id] = "gone"; state.blocked[id] = Date.now(); } });
       }
+      store.set("blocked", state.blocked);
       render();
       if (state.current) fillWatch(state.current);
     } catch (err) {
@@ -322,7 +341,7 @@
         items = data.items || [];
         try { sessionStorage.setItem(cacheKey, JSON.stringify({ t: Date.now(), items })); } catch { /* full */ }
       }
-      state.found = items.filter((it) => it.id && it.id.videoId).map((it, i) => ({
+      state.found = items.filter((it) => it.id && it.id.videoId && !state.blocked[it.id.videoId]).map((it, i) => ({
         id: "yt-" + it.id.videoId,
         yt: it.id.videoId,
         title: decodeEntities(it.snippet.title).replace(/\s*[|–—-]\s*live.*$/i, "").slice(0, 70) || "Live cam",
@@ -424,22 +443,27 @@
           },
           onError: (e) => {
             if (token !== mountToken) return;
-            const msg = e.data === 101 || e.data === 150
-              ? "This broadcaster doesn't allow playing their stream inside other apps."
-              : "The stream ended or moved to a new link.";
-            showNap(cam, msg);
+            // 100 = removed or private, 101/150 = owner blocks playing it in other apps.
+            if (e.data === 100 || e.data === 101 || e.data === 150) {
+              blockCam(cam);
+              showNap(cam, "This one can't play inside the app, so it's been taken off your list.", true);
+            } else {
+              showNap(cam, "The stream hiccuped or moved to a new link.");
+            }
           }
         }
       });
     }).catch(() => { /* the plain embed still plays; we just can't control sound */ });
   }
 
-  function showNap(cam, text) {
+  function showNap(cam, text, removed = false) {
     $("#stage-loading").hidden = true;
     $("#stage-error").hidden = false;
+    $("#stage-error-title").textContent = removed ? "This cam can't come inside" : "This cam is napping";
     $("#stage-error-text").textContent = text;
-    $("#err-find").hidden = !state.apiKey;
+    $("#err-find").hidden = !state.apiKey || removed;
     if (cam.yt) state.live[cam.yt] = "gone";
+    $("#w-more").innerHTML = allCams().filter((c) => c.id !== cam.id).slice(0, 8).map(cardHTML).join("");
   }
 
   /* -------------------------------------------------------------- sound: cam vs. my music */
@@ -625,7 +649,13 @@
   function renderMyCams() {
     const mine = state.myCams;
     $("#my-cams").innerHTML = mine.length
-      ? mine.map((c) => `<div class="my-cam"><span>${esc(c.title)}</span><button class="pill-btn ghost" data-remove="${esc(c.id)}">Remove</button></div>`).join("")
+      ? mine.filter((c) => !isBlocked(c)).map((c) => `<div class="my-cam"><span>${esc(c.title)}</span><button class="pill-btn ghost" data-remove="${esc(c.id)}">Remove</button></div>`).join("")
+      : "";
+    const hiddenCount = Object.keys(state.blocked).length;
+    const note = $("#hidden-cams");
+    note.hidden = !hiddenCount;
+    note.innerHTML = hiddenCount
+      ? `${hiddenCount} ${hiddenCount === 1 ? "cam is" : "cams are"} hidden because ${hiddenCount === 1 ? "it" : "they"} couldn't play inside the app. <button class="link-btn" data-unhide>Check again</button>`
       : "";
   }
 
@@ -700,6 +730,14 @@
       $("#clear-q").hidden = false; renderChips(); render(); return;
     }
     if (e.target.closest("[data-yt-search]")) { searchYouTube(state.query); return; }
+    if (e.target.closest("[data-unhide]")) {
+      state.blocked = {};
+      store.set("blocked", state.blocked);
+      renderMyCams(); render();
+      refreshLiveStatus();
+      toast("Hidden cams are back. Any that still can't play will hide again.");
+      return;
+    }
     const rm = e.target.closest("[data-remove]");
     if (rm) {
       const id = rm.dataset.remove;

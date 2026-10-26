@@ -86,7 +86,7 @@
         <span>tiptoeing in…</span>
       </div>
       <div class="stage-overlay nap" id="stage-error" hidden>
-        <strong>This cam is napping</strong>
+        <strong id="stage-error-title">This cam is napping</strong>
         <span id="stage-error-text">The stream ended or moved to a new link.</span>
         <div class="nap-actions">
           <button class="pill-btn" id="err-find" hidden>Find its new stream</button>
@@ -170,6 +170,7 @@
     </form>
 
     <div class="my-cams" id="my-cams"></div>
+    <p class="help hidden-note" id="hidden-cams" hidden></p>
 
     <form class="field-group" id="key-form">
       <h3>Search all of YouTube <span class="opt">optional</span></h3>

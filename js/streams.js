@@ -44,10 +44,11 @@ window.WW_CAMS = [
     blurb: "The only mainland royal albatross colony in the world. One fluffy chick, raised over most of a year."
   },
   {
-    id: "cranes-rowe", title: "Sandhill Cranes", place: "Rowe Sanctuary, Nebraska",
-    tz: "America/Chicago", cat: "birds", tags: ["crane", "cranes", "river", "migration", "sandhill"],
-    yt: "wDYrRVUPWRo", tone: "#e8dcc6",
-    blurb: "The Platte River, where hundreds of thousands of cranes gather each March on their way north."
+    id: "aviary-monterey", title: "Shorebird Aviary", place: "Monterey Bay Aquarium, California",
+    tz: "America/Los_Angeles", cat: "birds",
+    tags: ["shorebird", "stilt", "plover", "sandpiper", "oystercatcher", "turnstone", "phalarope", "sandy shore", "aviary", "aquarium", "beach", "crane"],
+    yt: "0L6ZCRHNjXY", tone: "#e8dcc6",
+    blurb: "The Sandy Shore & Aviary exhibit: rescued shorebirds like black-necked stilts and western snowy plovers, wading and splashing up close. Live during aquarium hours; after closing it plays a recording."
   },
   {
     id: "feeder-nuuksio", title: "Forest Feeder", place: "Nuuksio National Park, Finland",
