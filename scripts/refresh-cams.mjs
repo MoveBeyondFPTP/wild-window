@@ -28,6 +28,7 @@ const SETTINGS = {
   maxAutoCams: 40,        // cap on cams the script has added in total
   maxPerChannel: 3,       // avoid one channel taking over the list
   minViewers: 10,         // skip streams almost nobody watches (often not real cams)
+  maxChannelSearches: 50, // each costs 100 quota units; the rest wait until next week
   discoveryQueries: [
     "animal live cam",
     "wildlife live cam",
@@ -230,12 +231,15 @@ export async function refresh({ fetchImpl = fetch, key, root, dryRun = false, da
   const details = await videoDetails(api, ids); // if this fails (bad key, no quota) we stop: nothing is changed
   const usedIds = new Set(ids);
   const keep = [];
+  let channelSearches = 0;
+  const canSearch = () => channelSearches++ < SETTINGS.maxChannelSearches;
 
   for (const cam of cams) {
     report.checked++;
     try {
       if (cam.channel && !cam.yt) {
         // "Always live" channel embeds: just make sure the channel has something live.
+        if (!canSearch()) { keep.push(cam); continue; }
         const live = await searchLive(api, { channelId: cam.channel, maxResults: 1 });
         if (live.length) {
           if (cam.retired) { delete cam.retired; report.revived.push(cam.title); }
@@ -259,6 +263,11 @@ export async function refresh({ fetchImpl = fetch, key, root, dryRun = false, da
 
       // Not playable: look for this channel's new stream of the same animals.
       let replacement = null;
+      if (cam.channelId && !canSearch()) {
+        // Out of channel searches for this week: leave it as is and try again next Monday.
+        keep.push(cam);
+        continue;
+      }
       if (cam.channelId) {
         const live = await searchLive(api, { channelId: cam.channelId });
         const ranked = live
