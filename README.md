@@ -77,6 +77,26 @@ The free allowance is 10,000 units a day. Live badges cost about 1 unit per chec
 
 (You can also put the key in `js/config.js` so it works on every device — just make sure it's restricted to your site as in step 4, since the repo is public.)
 
+## Weekly cam refresh (every Monday morning)
+
+A GitHub Action runs every **Monday at about 5 am Denver time** (4 am in winter). It:
+
+- checks every cam and swaps in the new link when a stream has moved to a new video on the same YouTube channel
+- marks cams that are gone or block in-app playback as **off air**, so they're hidden from browsing (they come back automatically if they go live again)
+- searches YouTube for up to 6 new live animal cams that allow in-app playback, tagged **✦ new** for a week
+- saves a report in `data/refresh-log.json` (and on the run's page in the **Actions** tab)
+
+**Your favorites always carry over.** Each cam keeps the same id even when its stream link changes, and the app keeps its own copy of every favorite. If a favorite goes off air, it stays in your favorites with a "zzz · off air" badge instead of disappearing.
+
+### One-time setup
+
+1. Get a free YouTube Data API key (steps in the section above).
+2. In your GitHub repo, open **Settings → Secrets and variables → Actions → New repository secret**.
+3. Name it `YOUTUBE_API_KEY`, paste the key, and click **Add secret**.
+4. To try it right away: **Actions** tab → **Weekly cam refresh** → **Run workflow**.
+
+Each run uses roughly 1,000–2,500 of the 10,000 free daily YouTube units. To change the day or time, edit the `cron` line in `.github/workflows/refresh-cams.yml` (times are in UTC).
+
 ---
 
 ## Good to know
@@ -94,6 +114,9 @@ css/styles.css        the Storybook look
 js/streams.js         the built-in list of cams (edit me!)
 js/app.js             search, player, my music, saving
 js/config.js          optional YouTube API key
+scripts/refresh-cams.mjs   the weekly refresh
+.github/workflows/    runs the refresh every Monday
+data/refresh-log.json what the last refreshes changed
 manifest.webmanifest  home-screen app settings
 sw.js                 makes the app open fast and offline-friendly
 icons/                app icons

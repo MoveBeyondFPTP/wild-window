@@ -36,6 +36,7 @@
     cat: "all",
     daylight: false,
     saved: new Set(store.get("saved", [])),
+    favCams: store.get("favCams", {}), // a copy of every favorite, so it survives list refreshes
     myCams: store.get("myCams", []),
     musicMode: store.get("musicMode", false),
     apiKey: store.get("apiKey", "") || config.youtubeApiKey || "",
@@ -50,8 +51,34 @@
 
   const camKey = (c) => c.yt || (c.channel ? "ch:" + c.channel : c.id);
   const isBlocked = (c) => Boolean(state.blocked[camKey(c)]);
-  const allCams = () => [...state.myCams, ...CAMS].filter((c) => !isBlocked(c));
-  const findCam = (id) => allCams().find((c) => c.id === id) || state.found.find((c) => c.id === id);
+
+  // Everything we know about: your cams, the built-in list, and saved copies of favorites
+  // that the weekly refresh has since removed (so a favorite never just vanishes).
+  function catalog() {
+    const list = [...state.myCams, ...CAMS];
+    const ids = new Set(list.map((c) => c.id));
+    for (const id of state.saved) {
+      const copy = state.favCams[id];
+      if (copy && !ids.has(id)) list.push({ ...copy, orphan: true });
+    }
+    return list;
+  }
+  const offAir = (c) => Boolean(c.retired || c.orphan || isBlocked(c));
+  // Browsing, search and suggestions only show cams that can play right now.
+  const allCams = () => catalog().filter((c) => !offAir(c));
+  const findCam = (id) => catalog().find((c) => c.id === id) || state.found.find((c) => c.id === id);
+
+  // Keep each favorite's saved copy up to date with the latest list (new stream links etc).
+  function syncFavCopies() {
+    const live = new Map([...state.myCams, ...CAMS].map((c) => [c.id, c]));
+    const next = {};
+    for (const id of state.saved) {
+      const c = live.get(id) || state.favCams[id];
+      if (c) { const { orphan, ...rest } = c; next[id] = rest; }
+    }
+    state.favCams = next;
+    store.set("favCams", next);
+  }
 
   // Hide a cam everywhere once we learn it can't play inside the app.
   function blockCam(cam) {
@@ -150,9 +177,12 @@
 
   function filteredCams() {
     const tokens = words(state.query);
-    let list = allCams();
-    if (state.cat === "saved") list = list.filter((c) => state.saved.has(c.id));
-    else if (state.cat !== "all") list = list.filter((c) => c.cat === state.cat);
+    let list;
+    if (state.cat === "saved") list = catalog().filter((c) => state.saved.has(c.id)); // favorites show even when off air
+    else {
+      list = allCams();
+      if (state.cat !== "all") list = list.filter((c) => c.cat === state.cat);
+    }
     if (state.daylight) list = list.filter(isDaylight);
     return list
       .map((c, i) => ({ c, s: scoreCam(c, tokens), live: state.live[c.yt] === "live" ? 1 : 0, i }))
@@ -170,12 +200,16 @@
     cuddly: '<path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"/>'
   };
 
+  const isNew = (cam) => cam.added && (Date.now() - Date.parse(cam.added)) < 8 * 86400000;
+
   function badgeFor(cam) {
     if (cam.found) return '<span class="badge live">● live</span>';
+    if (offAir(cam)) return '<span class="badge nap">zzz · off air</span>';
     const s = cam.yt ? state.live[cam.yt] : null;
     if (s === "live") return '<span class="badge live">● live</span>';
     if (s === "off") return '<span class="badge nap">zzz · napping</span>';
     if (s === "gone") return '<span class="badge nap">zzz · moved</span>';
+    if (isNew(cam)) return '<span class="badge new">✦ new</span>';
     return '<span class="badge">● live cam</span>';
   }
 
@@ -210,7 +244,7 @@
 
   function favoriteCams() {
     const order = [...state.saved].reverse(); // newest heart first
-    const byId = new Map(allCams().map((c) => [c.id, c]));
+    const byId = new Map(catalog().map((c) => [c.id, c]));
     return order.map((id) => byId.get(id)).filter(Boolean);
   }
 
@@ -228,6 +262,7 @@
     }
     store.set("saved", [...state.saved]);
     store.set("myCams", state.myCams);
+    syncFavCopies();
 
     // Update every heart for this cam in place, so the little pop animation shows.
     document.querySelectorAll(".fav-btn").forEach((b) => {
@@ -514,7 +549,9 @@
             // 100 = removed or private, 101/150 = owner blocks playing it in other apps.
             if (e.data === 100 || e.data === 101 || e.data === 150) {
               blockCam(cam);
-              showNap(cam, "This one can't play inside the app, so it's been taken off your list.", true);
+              showNap(cam, isFav(cam)
+                ? "This one can't play inside the app right now. It stays in your favorites in case it comes back."
+                : "This one can't play inside the app, so it's been taken off your list.", true);
             } else {
               showNap(cam, "The stream hiccuped or moved to a new link.");
             }
@@ -622,8 +659,11 @@
     const s = cam.found ? "live" : (cam.yt ? state.live[cam.yt] : null);
     const pill = $("#w-live");
     pill.className = "live-pill" + (s === "live" ? " live" : "");
-    pill.textContent = s === "live" ? "● live now" : s === "off" ? "zzz · napping" : s === "gone" ? "zzz · moved" : "● live cam";
-    $("#w-blurb").textContent = cam.blurb || "";
+    pill.textContent = offAir(cam) ? "zzz · off air"
+      : s === "live" ? "● live now" : s === "off" ? "zzz · napping" : s === "gone" ? "zzz · moved" : "● live cam";
+    $("#w-blurb").textContent = offAir(cam)
+      ? "This cam is off the air for now. It stays in your favorites, and the weekly refresh brings it back as soon as it's live again."
+      : (cam.blurb || "");
     $("#w-blurb").hidden = !cam.blurb;
 
     updateWatchFav(isFav(cam), false);
@@ -908,6 +948,7 @@
   setInterval(refreshLiveStatus, 10 * 60 * 1000);
 
   /* -------------------------------------------------------------- start */
+  syncFavCopies();
   setGreeting();
   setAudioSession();
   renderChips();

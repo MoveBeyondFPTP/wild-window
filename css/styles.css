@@ -188,6 +188,7 @@ svg { display: block; }
 }
 .badge.live { color: #a8412b; }
 .badge.nap { color: var(--muted); }
+.badge.new { background: var(--gold); color: var(--ink); }
 /* heart on each card: sits on the thumbnail's bottom-right corner */
 .card-wrap {
   position: relative;
