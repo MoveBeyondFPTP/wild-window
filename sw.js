@@ -1,6 +1,6 @@
 /* Wild Window service worker: lets the app open instantly from the home screen.
    Live video always comes straight from YouTube and is never cached. */
-const CACHE = "wild-window-v4";
+const CACHE = "wild-window-v5";
 const SHELL = [
   "./",
   "index.html",
@@ -27,11 +27,18 @@ self.addEventListener("activate", (e) => {
 });
 
 // Network first for the app's own files (so updates show up), cache as backup.
+// "no-cache" makes the phone ask GitHub whether a file changed instead of reusing
+// its own copy for up to 10 minutes, so new cams appear right away.
+function fresh(req) {
+  if (req.mode === "navigate") return fetch(req.url, { cache: "no-cache", credentials: "same-origin" });
+  return fetch(new Request(req, { cache: "no-cache" }));
+}
+
 self.addEventListener("fetch", (e) => {
   const req = e.request;
   if (req.method !== "GET" || new URL(req.url).origin !== self.location.origin) return;
   e.respondWith(
-    fetch(req)
+    fresh(req)
       .then((res) => {
         const copy = res.clone();
         caches.open(CACHE).then((c) => c.put(req, copy)).catch(() => {});

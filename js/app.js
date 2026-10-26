@@ -970,7 +970,55 @@
     });
   }
 
+  /* -------------------------------------------------------------- staying up to date
+     Home-screen apps on iPhone are rarely closed; they just resume. So when the app comes
+     back to the front, check for a newer cam list or app version and quietly reload.
+     Favorites, settings and hidden cams live in this phone's storage, so nothing is lost. */
+  let reloadWhenIdle = false;
+  let hiddenAt = 0;
+  const camFingerprint = (list) => {
+    const s = JSON.stringify(list || []);
+    let h = 0;
+    for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) | 0;
+    return `${(list || []).length}:${h}`;
+  };
+  const loadedFingerprint = camFingerprint(window.WW_CAMS);
+
+  function reloadSoon() {
+    // Never interrupt someone watching a cam; wait until they're back to browsing.
+    if (state.view === "browse" && $("#settings").hidden) location.reload();
+    else reloadWhenIdle = true;
+  }
+
+  async function checkForUpdates() {
+    try {
+      const res = await fetch("js/streams.js", { cache: "no-cache" });
+      if (!res.ok) return;
+      const fake = {};
+      new Function("window", await res.text())(fake);
+      if (camFingerprint(fake.WW_CAMS) !== loadedFingerprint) reloadSoon();
+    } catch { /* offline: try again next time */ }
+    try {
+      const reg = navigator.serviceWorker && await navigator.serviceWorker.getRegistration();
+      if (reg) reg.update();
+    } catch { /* ignore */ }
+  }
+
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) { hiddenAt = Date.now(); return; }
+    if (hiddenAt && Date.now() - hiddenAt > 60 * 1000) checkForUpdates();
+  });
+  // Pick up a pending reload once the person closes the player or settings.
+  const idleCheck = () => { if (reloadWhenIdle) reloadSoon(); };
+  $("#close-watch").addEventListener("click", () => setTimeout(idleCheck, 50));
+  $("#mini-close").addEventListener("click", () => setTimeout(idleCheck, 50));
+  $("#close-settings").addEventListener("click", () => setTimeout(idleCheck, 50));
+  setInterval(() => { if (!document.hidden && state.view === "browse") checkForUpdates(); }, 30 * 60 * 1000);
+
   if ("serviceWorker" in navigator && /^https:|^http:\/\/localhost/.test(location.href)) {
+    const hadController = Boolean(navigator.serviceWorker.controller);
+    // When a newer version of the app takes over, reload once to show it.
+    navigator.serviceWorker.addEventListener("controllerchange", () => { if (hadController) reloadSoon(); });
     window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));
   }
 })();
