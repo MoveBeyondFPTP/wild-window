@@ -79,7 +79,7 @@ The free allowance is 10,000 units a day. Live badges cost about 1 unit per chec
 
 ## Weekly cam refresh (every Monday morning)
 
-A GitHub Action runs every **Monday at about 5 am Denver time** (4 am in winter). It:
+A GitHub Action runs every **Monday at about 4 am Denver time** (5 am in summer). GitHub sometimes starts scheduled runs a few hours late. It:
 
 - checks every cam and swaps in the new link when a stream has moved to a new video on the same YouTube channel
 - marks cams that are gone or block in-app playback as **off air**, so they're hidden from browsing (they come back automatically if they go live again)
@@ -90,10 +90,15 @@ A GitHub Action runs every **Monday at about 5 am Denver time** (4 am in winter)
 
 ### One-time setup
 
-1. Get a free YouTube Data API key (steps in the section above).
-2. In your GitHub repo, open **Settings → Secrets and variables → Actions → New repository secret**.
-3. Name it `YOUTUBE_API_KEY`, paste the key, and click **Add secret**.
-4. To try it right away: **Actions** tab → **Weekly cam refresh** → **Run workflow**.
+The weekly job needs its **own** YouTube key. A key locked to your website (the one for the app) is refused when GitHub uses it, because GitHub isn't your website.
+
+1. In [Google Cloud Console](https://console.cloud.google.com/) → **APIs & Services → Credentials**, click **Create credentials → API key**.
+2. Click the new key. Leave **Application restrictions** set to **None**. Under **API restrictions**, choose **Restrict key** → **YouTube Data API v3**. Save. (This key can only read public YouTube info, and it stays hidden in GitHub.)
+3. In your GitHub repo, open **Settings → Secrets and variables → Actions → New repository secret**.
+4. Name it `YOUTUBE_API_KEY`, paste the key, and click **Add secret**.
+5. To try it right away: **Actions** tab → **Weekly cam refresh** → **Run workflow**. A green check means it worked. If it fails, the run's page says why in plain words.
+
+Until the key is added, the Monday run is skipped with a note instead of failing.
 
 Each run uses roughly 1,000–2,500 of the 10,000 free daily YouTube units. To change the day or time, edit the `cron` line in `.github/workflows/refresh-cams.yml` (times are in UTC).
 

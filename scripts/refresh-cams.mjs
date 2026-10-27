@@ -401,17 +401,27 @@ function list(title, items) {
 }
 
 /* ------------------------------------------------------------------ run */
+// In GitHub Actions, "::warning::" / "::error::" lines show up as readable notes on the
+// run's page and in the email, instead of being buried in the log.
+const inActions = Boolean(process.env.GITHUB_ACTIONS);
+const note = (kind, msg) => console.log(inActions ? `::${kind} title=Weekly cam refresh::${msg}` : msg);
+
 if (import.meta.url === pathToFileURL(process.argv[1] || "").href) {
-  const key = process.env.YOUTUBE_API_KEY;
+  const key = (process.env.YOUTUBE_API_KEY || "").trim();
   if (!key) {
-    console.error("Missing YOUTUBE_API_KEY. Add it in GitHub: Settings → Secrets and variables → Actions → New repository secret.");
-    process.exit(1);
+    // Not an error: the app works fine without the refresh. Skip quietly (no failure email).
+    note("warning", "Skipped: no YouTube API key yet. Add one in GitHub → Settings → Secrets and variables → Actions → New repository secret, named YOUTUBE_API_KEY.");
+    process.exit(0);
   }
   const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
   refresh({ key, root, dryRun: process.argv.includes("--dry-run") }).catch((err) => {
-    console.error(err.quota
-      ? "YouTube's daily allowance is used up, so nothing was changed. It resets at midnight Pacific time."
-      : `Refresh failed, nothing was changed: ${err.message}`);
+    let msg;
+    if (err.quota) msg = "YouTube's daily allowance is used up, so nothing was changed. It resets at midnight Pacific time.";
+    else if (/API key not valid|keyInvalid|badRequest.*key/i.test(err.message)) msg = "YouTube says the API key isn't valid. Copy it again from Google Cloud Console and update the YOUTUBE_API_KEY secret.";
+    else if (/referer|referrer|blocked/i.test(err.message)) msg = "The API key is restricted to websites, so it can't be used from GitHub. Make a second key with no website restriction (API restriction: YouTube Data API v3 only) and save that one as YOUTUBE_API_KEY.";
+    else if (/has not been used|disabled|accessNotConfigured/i.test(err.message)) msg = "YouTube Data API v3 isn't turned on for this key's Google Cloud project. Enable it under APIs & Services → Library.";
+    else msg = `Refresh failed, nothing was changed: ${err.message}`;
+    note("error", msg);
     process.exit(1);
   });
 }
