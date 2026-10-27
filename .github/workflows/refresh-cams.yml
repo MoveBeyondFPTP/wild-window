@@ -14,10 +14,6 @@ on:
     # GitHub sometimes starts scheduled runs a few hours late when it's busy.
     - cron: "17 10 * * 1"
   workflow_dispatch:
-  # Temporary: run once when this file changes, to test the fix. Remove afterwards.
-  push:
-    branches: [main]
-    paths: [".github/workflows/refresh-cams.yml"]
 
 permissions:
   contents: write
