@@ -28,7 +28,6 @@ const SETTINGS = {
   maxAutoCams: 40,        // cap on cams the script has added in total
   maxPerChannel: 3,       // avoid one channel taking over the list
   minViewers: 10,         // skip streams almost nobody watches (often not real cams)
-  maxChannelSearches: 50, // each costs 100 quota units; the rest wait until next week
   discoveryQueries: [
     "animal live cam",
     "wildlife live cam",
@@ -174,9 +173,38 @@ function isPlayable(item) {
 async function searchLive(api, params) {
   const data = await api("search", {
     part: "snippet", type: "video", eventType: "live", videoEmbeddable: "true",
-    safeSearch: "strict", maxResults: 25, ...params
+    safeSearch: "moderate", maxResults: 25, ...params
   }, 100);
   return (data.items || []).filter((it) => it.id?.videoId);
+}
+
+// What's live on a channel right now. YouTube's search often comes back empty for
+// "live on this channel", so read the channel's uploads list instead (live streams
+// are in it) and check those videos directly. Costs 2 units instead of 100.
+function makeChannelLookup(api, report) {
+  const cache = new Map();
+  return async function liveOnChannel(channelId) {
+    if (!channelId) return [];
+    if (cache.has(channelId)) return cache.get(channelId);
+    const result = (async () => {
+      const uploads = "UU" + channelId.slice(2);
+      let ids = [];
+      try {
+        const data = await api("playlistItems", { part: "contentDetails", playlistId: uploads, maxResults: 50 }, 1);
+        ids = (data.items || []).map((it) => it.contentDetails?.videoId).filter(Boolean);
+      } catch (err) {
+        if (err.quota) throw err;
+        report.diag.channelErrors.push(`${channelId}: ${err.message}`.slice(0, 160));
+        return [];
+      }
+      const info = await videoDetails(api, ids);
+      return [...info.values()]
+        .filter((it) => isPlayable(it) && it.snippet?.liveBroadcastContent === "live")
+        .map((it) => ({ id: { videoId: it.id }, snippet: it.snippet }));
+    })();
+    cache.set(channelId, result);
+    return result;
+  };
 }
 
 function matchScore(cam, title) {
@@ -221,7 +249,8 @@ export async function refresh({ fetchImpl = fetch, key, root, dryRun = false, da
   const logFile = path.join(root, "data/refresh-log.json");
   const report = {
     ranAt: new Date().toISOString(), checked: 0, playable: 0,
-    replaced: [], retired: [], revived: [], removed: [], added: [], notes: [], quotaUsed: 0
+    replaced: [], retired: [], revived: [], removed: [], added: [], notes: [], quotaUsed: 0,
+    diag: { notPlayable: [], channelErrors: [], discovery: {} }
   };
   const api = makeApi(fetchImpl, key, report);
   const { cams, header } = await loadCams(streamsFile);
@@ -231,16 +260,14 @@ export async function refresh({ fetchImpl = fetch, key, root, dryRun = false, da
   const details = await videoDetails(api, ids); // if this fails (bad key, no quota) we stop: nothing is changed
   const usedIds = new Set(ids);
   const keep = [];
-  let channelSearches = 0;
-  const canSearch = () => channelSearches++ < SETTINGS.maxChannelSearches;
+  const liveOnChannel = makeChannelLookup(api, report);
 
   for (const cam of cams) {
     report.checked++;
     try {
       if (cam.channel && !cam.yt) {
         // "Always live" channel embeds: just make sure the channel has something live.
-        if (!canSearch()) { keep.push(cam); continue; }
-        const live = await searchLive(api, { channelId: cam.channel, maxResults: 1 });
+        const live = await liveOnChannel(cam.channel);
         if (live.length) {
           if (cam.retired) { delete cam.retired; report.revived.push(cam.title); }
           report.playable++;
@@ -262,14 +289,14 @@ export async function refresh({ fetchImpl = fetch, key, root, dryRun = false, da
       }
 
       // Not playable: look for this channel's new stream of the same animals.
+      const why = !item ? "deleted or private"
+        : item.status?.embeddable === false ? "embedding turned off"
+        : item.liveStreamingDetails?.actualEndTime ? "stream ended"
+        : `not live (${item.snippet?.liveBroadcastContent})`;
+      report.diag.notPlayable.push(`${cam.id}: ${why}`);
       let replacement = null;
-      if (cam.channelId && !canSearch()) {
-        // Out of channel searches for this week: leave it as is and try again next Monday.
-        keep.push(cam);
-        continue;
-      }
       if (cam.channelId) {
-        const live = await searchLive(api, { channelId: cam.channelId });
+        const live = await liveOnChannel(cam.channelId);
         const ranked = live
           .filter((it) => !usedIds.has(it.id.videoId))
           .map((it) => ({ it, score: matchScore(cam, it.snippet.title) }))
@@ -309,7 +336,9 @@ export async function refresh({ fetchImpl = fetch, key, root, dryRun = false, da
       const found = new Map();
       for (const q of SETTINGS.discoveryQueries) {
         try {
-          for (const it of await searchLive(api, { q, relevanceLanguage: "en" })) {
+          const hits = await searchLive(api, { q, relevanceLanguage: "en" });
+          report.diag.discovery[q] = hits.length;
+          for (const it of hits) {
             if (!usedIds.has(it.id.videoId)) found.set(it.id.videoId, it);
           }
         } catch (err) {
@@ -321,12 +350,13 @@ export async function refresh({ fetchImpl = fetch, key, root, dryRun = false, da
       const perChannel = new Map();
       for (const c of keep) if (c.channelId) perChannel.set(c.channelId, (perChannel.get(c.channelId) || 0) + 1);
 
-      const candidates = [...info.values()]
-        .filter(isPlayable)
-        .filter((it) => it.snippet.liveBroadcastContent === "live")
-        .filter((it) => Number(it.liveStreamingDetails?.concurrentViewers || 0) >= SETTINGS.minViewers)
-        .filter((it) => animalWords(it.snippet.title).length > 0)
-        .filter((it) => !isExcluded(it.snippet.title) && !isExcluded(it.snippet.channelTitle))
+      const stage = (label, list) => { report.diag.discovery[label] = list.length; return list; };
+      let pool = stage("_new results", [...info.values()]);
+      pool = stage("_playable", pool.filter(isPlayable).filter((it) => it.snippet.liveBroadcastContent === "live"));
+      pool = stage("_enough viewers", pool.filter((it) => Number(it.liveStreamingDetails?.concurrentViewers || 0) >= SETTINGS.minViewers));
+      pool = stage("_animal words", pool.filter((it) => animalWords(it.snippet.title).length > 0));
+      pool = stage("_not excluded", pool.filter((it) => !isExcluded(it.snippet.title) && !isExcluded(it.snippet.channelTitle)));
+      const candidates = pool
         .sort((a, b) => Number(b.liveStreamingDetails.concurrentViewers) - Number(a.liveStreamingDetails.concurrentViewers));
 
       const seenTitles = new Set(keep.map((c) => norm(c.title)));
@@ -370,7 +400,8 @@ export async function refresh({ fetchImpl = fetch, key, root, dryRun = false, da
   const summary = {
     ranAt: report.ranAt, checked: report.checked, playable: report.playable,
     replaced: report.replaced, retired: report.retired, revived: report.revived,
-    removed: report.removed, added: report.added, notes: report.notes, quotaUsed: report.quotaUsed
+    removed: report.removed, added: report.added, notes: report.notes, quotaUsed: report.quotaUsed,
+    diagnostics: report.diag
   };
   const logOut = JSON.stringify({ lastRun: summary, history: [summary, ...history].slice(0, 12) }, null, 2) + "\n";
 
