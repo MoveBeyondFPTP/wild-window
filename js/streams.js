@@ -91,12 +91,11 @@ window.WW_CAMS = [
       "chick",
       "ocean"
     ],
-    "yt": "fDhIv9iBzWk",
+    "yt": "J7HO0dkkomE",
     "channelId": "UCZXZQxS3d6NpR-eH_gdDwYA",
     "tone": "#cfe0d6",
     "blurb": "The only mainland royal albatross colony in the world. One fluffy chick, raised over most of a year.",
-    "ytTitle": "Live! Royal Albatross Cam - #RoyalCam - New Zealand Dept. of Conservation | Cornell Lab",
-    "retired": "2026-10-27"
+    "ytTitle": "Hellgate Ospreys Nest Cam | Cornell Lab | University of Montana"
   },
   {
     "id": "aviary-monterey",
@@ -118,12 +117,11 @@ window.WW_CAMS = [
       "beach",
       "crane"
     ],
-    "yt": "0L6ZCRHNjXY",
+    "yt": "AWJi0LgyA28",
     "channelId": "UCnM5iMGiKsZg-iOlIO2ZkdQ",
     "tone": "#e8dcc6",
     "blurb": "The Sandy Shore & Aviary exhibit: rescued shorebirds like black-necked stilts and western snowy plovers, wading and splashing up close. Live during aquarium hours; after closing it plays a recording.",
-    "ytTitle": "Aviary Cam After Hours - Monterey Bay Aquarium",
-    "retired": "2026-10-27"
+    "ytTitle": "Live Aviary Cam | Monterey Bay Aquarium"
   },
   {
     "id": "feeder-nuuksio",
@@ -157,12 +155,11 @@ window.WW_CAMS = [
       "aquarium",
       "swim"
     ],
-    "yt": "FqlbLvuln-M",
+    "yt": "bV4EiHr53ek",
     "channelId": "UCZvXaNYIcapCEcaJe_2cP7A",
     "tone": "#c9e0ec",
     "blurb": "A busy colony of African penguins waddling, swimming and squabbling over the best rocks.",
-    "ytTitle": "Live Penguin Cam (Colony View) | California Academy of Sciences",
-    "retired": "2026-10-27"
+    "ytTitle": "Live Penguin Cam (Colony View) | California Academy of Sciences"
   },
   {
     "id": "blue-penguins-oamaru",
@@ -178,12 +175,11 @@ window.WW_CAMS = [
       "colony",
       "night"
     ],
-    "yt": "IKhGWZeCns8",
+    "yt": "Vf0i2uv4c58",
     "channelId": "UCSlIi8WXERrJUce_les6V6w",
     "tone": "#bcd3e6",
     "blurb": "The world's smallest penguins. They come ashore in rafts just after dusk.",
-    "ytTitle": "Ōamaru Penguins Live Cam",
-    "retired": "2026-10-27"
+    "ytTitle": "Otago Shag Colony , Sumpter Wharf Ōamaru"
   },
   {
     "id": "reef-steinhart",
@@ -199,12 +195,11 @@ window.WW_CAMS = [
       "underwater",
       "colorful"
     ],
-    "yt": "3NAplOMQ5pU",
+    "yt": "je7nCiZhEJE",
     "channelId": "UCZvXaNYIcapCEcaJe_2cP7A",
     "tone": "#f6d58e",
     "blurb": "A living Philippine coral reef, full of bright fish drifting past.",
-    "ytTitle": "Live Coral Reef Cam | California Academy of Sciences",
-    "retired": "2026-10-27"
+    "ytTitle": "Live Coral Reef Cam | California Academy of Sciences"
   },
   {
     "id": "moon-jellies",
@@ -221,12 +216,11 @@ window.WW_CAMS = [
       "calm",
       "relaxing"
     ],
-    "yt": "IEGYa3FlY1s",
+    "yt": "zL68biE6wAs",
     "channelId": "UCnM5iMGiKsZg-iOlIO2ZkdQ",
     "tone": "#d9c7e8",
     "blurb": "Translucent moon jellies pulsing slowly through blue water. Very calming.",
-    "ytTitle": "Live Moon Jelly Cam - Monterey Bay Aquarium",
-    "retired": "2026-10-27"
+    "ytTitle": "Live Moon Jelly Cam | Monterey Bay Aquarium"
   },
   {
     "id": "sea-nettles",
@@ -243,12 +237,11 @@ window.WW_CAMS = [
       "underwater",
       "calm"
     ],
-    "yt": "vUL-RX_aoOg",
+    "yt": "uWiJ9qCYxoo",
     "channelId": "UCSyg9cb3Iq-NtlbxqNB9wGw",
     "tone": "#f3cdb8",
     "blurb": "Golden Pacific sea nettles trailing long ribbony tentacles.",
-    "ytTitle": "West Coast Sea Nettles powered by EXPLORE.org",
-    "retired": "2026-10-27"
+    "ytTitle": "Silver Springs 180 Degree Underwater Manatee Cam powered by EXPLORE.org"
   },
   {
     "id": "jelly-drift",
@@ -264,12 +257,11 @@ window.WW_CAMS = [
       "underwater",
       "calm"
     ],
-    "yt": "gswNWtJlUco",
+    "yt": "eQ_foBERmzA",
     "channelId": "UCnM5iMGiKsZg-iOlIO2ZkdQ",
     "tone": "#c9d6e8",
     "blurb": "Another dreamy jelly tank for when one isn't enough.",
-    "ytTitle": "Live Jelly Cam - Monterey Bay Aquarium",
-    "retired": "2026-10-27"
+    "ytTitle": "Live Jelly Cam | Monterey Bay Aquarium"
   },
   {
     "id": "orcas-bc",
@@ -363,12 +355,11 @@ window.WW_CAMS = [
       "mountain",
       "bamboo"
     ],
-    "yt": "DP9hbJmwbNU",
+    "yt": "vu7I315gQpU",
     "channelId": "UC2Sk0aXLq3ADkH_USGPKT_Q",
     "tone": "#d6e4cc",
     "blurb": "A wilder panda enclosure in the misty mountains of Sichuan.",
-    "ytTitle": "Gengda Valley Panda Cam powered by EXPLORE.org",
-    "retired": "2026-10-27"
+    "ytTitle": "LIVE Underwater Salmon Cam - Katmai National Park, Alaska | explore.org"
   },
   {
     "id": "capybaras-taronga",
@@ -383,12 +374,11 @@ window.WW_CAMS = [
       "chill",
       "zoo"
     ],
-    "yt": "6j7pqjym1EE",
+    "yt": "RzasUXCTStM",
     "channelId": "UCB4RSGRBhM670UlcG-oCxeA",
     "tone": "#f3cdb8",
     "blurb": "The world's most relaxed rodents, doing very little, very well.",
-    "ytTitle": "Capybara Live stream",
-    "retired": "2026-10-27"
+    "ytTitle": "Capybara Live stream"
   },
   {
     "id": "giraffes-melbourne",
@@ -443,12 +433,11 @@ window.WW_CAMS = [
       "africa",
       "savanna"
     ],
-    "yt": "KyQAB-TKOVA",
+    "yt": "-7GOA9KIWcs",
     "channelId": "UCiGOIXjFqy5_mUNxQNOMfHw",
     "tone": "#f3cdb8",
     "blurb": "A Kenyan waterhole where elephants, zebras, giraffes and more stop for a drink.",
-    "ytTitle": "African Watering Hole powered by Explore.org",
-    "retired": "2026-10-27"
+    "ytTitle": "LIVE Main Crossing: Masai Mara Great Migration River Crossing - Africam | explore.org"
   },
   {
     "id": "explore-africa",
@@ -467,8 +456,7 @@ window.WW_CAMS = [
     ],
     "channel": "UCiGOIXjFqy5_mUNxQNOMfHw",
     "tone": "#e8dcc6",
-    "blurb": "explore.org's main African wildlife stream, at a waterhole or river depending on the season.",
-    "retired": "2026-10-27"
+    "blurb": "explore.org's main African wildlife stream, at a waterhole or river depending on the season."
   },
   {
     "id": "monkeys-awaji",
@@ -502,12 +490,11 @@ window.WW_CAMS = [
       "night",
       "city"
     ],
-    "yt": "V-MaZaLBBr0",
+    "yt": "wbfdBrITU7Y",
     "channelId": "UCTkfwW5CMZjlx2R4_iCAZ_w",
     "tone": "#f3cdb8",
     "blurb": "City foxes visiting a Dublin garden, mostly at dawn and dusk.",
-    "ytTitle": "Foxheaven Dublin Ireland Livestream",
-    "retired": "2026-10-27"
+    "ytTitle": "Foxheaven Dublin Ireland Livestream"
   },
   {
     "id": "kittens-langley",
@@ -523,12 +510,11 @@ window.WW_CAMS = [
       "rescue",
       "foster"
     ],
-    "yt": "X7wHup1Be70",
+    "yt": "tbuRTSnDUS8",
     "channelId": "UCeL2LSl91k2VccR7XEh5IKg",
     "tone": "#d9c7e8",
     "blurb": "A foster room full of tiny rescue kittens. Maximum cuteness, minimal sleep.",
-    "ytTitle": "Wednesday and her seven kittens! 🐾🥰",
-    "retired": "2026-10-27"
+    "ytTitle": "LIVE INTAKE: New kitten who needs our help! 🐾🙀"
   },
   {
     "id": "shark-lagoon-calacademy",
@@ -545,12 +531,11 @@ window.WW_CAMS = [
       "aquarium",
       "fish"
     ],
-    "yt": "ubwxOJ7LBPA",
+    "yt": "eFak1bHw6Us",
     "channelId": "UCZvXaNYIcapCEcaJe_2cP7A",
     "tone": "#d9c7e8",
     "blurb": "Sharks and rays cruise over a reef in the academy's lagoon tank.",
-    "ytTitle": "Live Reef Lagoon Cam (Lagoon View) | California Academy of Sciences",
-    "retired": "2026-10-27"
+    "ytTitle": "Live Penguin Cam (Underwater View) | California Academy of Sciences"
   },
   {
     "id": "spider-crabs-monterey",
@@ -604,12 +589,11 @@ window.WW_CAMS = [
       "aquarium",
       "tropical"
     ],
-    "yt": "JWaAzI6ryHY",
+    "yt": "lin8TLZfuks",
     "channelId": "UCzK4mZybYjXr6kiPcSNwWJg",
     "tone": "#f6d58e",
     "blurb": "Sharks glide among schools of tropical fish in a Vienna aquarium.",
-    "ytTitle": "Haus des Meeres Aqua Terra Zoo: Haifischbecken Kamera 2",
-    "retired": "2026-10-27"
+    "ytTitle": "Haus des Meeres Aqua Terra Zoo: Dachkamera Nord"
   },
   {
     "id": "ash-wood-yorkshire",
@@ -626,12 +610,11 @@ window.WW_CAMS = [
       "woodland",
       "forest"
     ],
-    "yt": "z-lG3ro832c",
+    "yt": "bnQloTGd3OY",
     "channelId": "UCU0LJ9et5Tb3m7COFzShgLg",
     "tone": "#c9d6e8",
     "blurb": "A Yorkshire wood visited by tawny owls, kestrels, buzzards and badgers.",
-    "ytTitle": "🔴 LIVE Tawny Owls, Kestrels , Buzzards, Badgers & More | From Ash Wood, Yorkshire, UK",
-    "retired": "2026-10-27"
+    "ytTitle": "🔴 LIVE Tawny Owls, Kestrels , Buzzards, Badgers & More | From Ash Wood, Yorkshire, UK"
   },
   {
     "id": "sharks-monterey",
@@ -684,12 +667,11 @@ window.WW_CAMS = [
       "fish",
       "zoo"
     ],
-    "yt": "N8E8JIZFaS0",
+    "yt": "yidNBEOdQUY",
     "channelId": "UCQv8IYkfj8RAPDHGHivaQIA",
     "tone": "#bcd3e6",
     "blurb": "Ducks paddle the pond while fish drift below and zoo animals wander by.",
-    "ytTitle": "Trevor-Lovejoy Zoo Pond LIVE",
-    "retired": "2026-10-27"
+    "ytTitle": "Trevor-Lovejoy Zoo Red Wolf Den LIVE"
   },
   {
     "id": "storks-brenz-castle",
@@ -781,12 +763,11 @@ window.WW_CAMS = [
       "nest",
       "chicks"
     ],
-    "yt": "yv2RtoIMNzA",
+    "yt": "gnF7_gRHHMQ",
     "channelId": "UCNMulUCdUibAMPnaR1e0kEw",
     "tone": "#c9d6e8",
     "blurb": "A famous peregrine falcon family nesting on a university tower. Chicks hatch around October.",
-    "ytTitle": "Box Camera - FalconCam Project LIVE",
-    "retired": "2026-10-27"
+    "ytTitle": "Box Camera - FalconCam Project LIVE"
   },
   {
     "id": "ospreys-port-lincoln",
@@ -801,12 +782,11 @@ window.WW_CAMS = [
       "ocean",
       "chicks"
     ],
-    "yt": "5SQd6QkBbc0",
+    "yt": "_gIf6CYeDG8",
     "channelId": "UCK_BLeXdJeHqA1SlC79CruQ",
     "tone": "#e8dcc6",
     "blurb": "Ospreys nesting on a barge by the sea, bringing in fish for their chicks.",
-    "ytTitle": "Port Lincoln Osprey Live Stream",
-    "retired": "2026-10-27"
+    "ytTitle": "Port Lincoln Osprey Live Stream WIDE"
   },
   {
     "id": "sharks-vienna-aquazoo",
@@ -821,12 +801,11 @@ window.WW_CAMS = [
       "aquarium",
       "underwater"
     ],
-    "yt": "5W3j79XsPOk",
+    "yt": "GelCrPQeUtg",
     "channelId": "UCzK4mZybYjXr6kiPcSNwWJg",
     "tone": "#d6e4cc",
     "blurb": "Sharks and colorful fish sharing a big underwater tank.",
-    "ytTitle": "Haus des Meeres Aqua Terra Zoo: Haifischbecken Kamera 1",
-    "retired": "2026-10-27"
+    "ytTitle": "Haus des Meeres Aqua Terra Zoo: Dachkamera West"
   },
   {
     "id": "goats-ontario",
@@ -841,12 +820,11 @@ window.WW_CAMS = [
       "lake",
       "pasture"
     ],
-    "yt": "gHnLiseAFcU",
+    "yt": "DDhbzuQpSsY",
     "channelId": "UCPresk6FCncOSvqZIq3iLgA",
     "tone": "#bcd3e6",
     "blurb": "Bouncy goats grazing and leaping around a lakeside pasture.",
-    "ytTitle": "Greta's Corner Office Camera - Syman Says Farms",
-    "retired": "2026-10-27"
+    "ytTitle": "Live Goats - Syman Says Farms Cam 3"
   },
   {
     "id": "guinea-pigs-bakkeveen",
@@ -881,12 +859,11 @@ window.WW_CAMS = [
       "rabbit",
       "backyard"
     ],
-    "yt": "QhxCVRJrVHs",
+    "yt": "b6-zNf3BGy0",
     "channelId": "UCuL60_Ko4m9xCaa4QDNgJrw",
     "tone": "#bfd8c8",
     "blurb": "Backyard feeders that draw songbirds, squirrels and the odd rabbit.",
-    "ytTitle": "🔴 LIVE NOW: Ohio Backyard Wildlife Frenzy (Birds, Squirrels, Rabbits)",
-    "retired": "2026-10-27"
+    "ytTitle": "🔴 LIVE Backyard Wildlife in Ohio (Birds, Squirrels, Rabbits)"
   },
   {
     "id": "kestrels-ramat-hanadiv",
@@ -900,12 +877,11 @@ window.WW_CAMS = [
       "falcon",
       "nest"
     ],
-    "yt": "ZiGVPn79Xm0",
+    "yt": "MeKqyV8Hpn4",
     "channelId": "UCzbydNAcB7jeJGssRFb_dCA",
     "tone": "#f3cdb8",
     "blurb": "Lesser kestrels, tiny falcons, nesting in a nature park.",
-    "ytTitle": "LIVE Lesser Kestrel Israel Cam| Ramat Hanadiv| The Charter Group of Wildlife Ecology",
-    "retired": "2026-10-27"
+    "ytTitle": "6 Live Birdcams | One Stream • Real Wildlife 24/7 – Charter Group Birdcams"
   },
   {
     "id": "sheep-texel-dunes",
@@ -1063,12 +1039,11 @@ window.WW_CAMS = [
       "nest",
       "city"
     ],
-    "yt": "pIcc9WLm5as",
+    "yt": "y2wUAK1yvQE",
     "channelId": "UCpVaKjo5ISas-o6Hiy-HVMg",
     "tone": "#f3cdb8",
     "blurb": "Peregrine falcons nesting high on a cathedral spire.",
-    "ytTitle": "The Wakefield Peregrine Project - Live Spire Cam",
-    "retired": "2026-10-27"
+    "ytTitle": "The Wakefield Peregrine Project - Live Spire Cam"
   },
   {
     "id": "kitten-nursery-california",
@@ -1084,12 +1059,11 @@ window.WW_CAMS = [
       "rescue",
       "foster"
     ],
-    "yt": "o8YhyLb__cI",
+    "yt": "gBdqOuhj2P4",
     "channelId": "UC6B91hbZkdiDjWdu00QCcew",
     "tone": "#f6d58e",
     "blurb": "Tiny rescue kittens being bottle-fed and cared for.",
-    "ytTitle": "Kitten Rescue - Baby Kittens Cam powered by EXPLORE.org",
-    "retired": "2026-10-27"
+    "ytTitle": "Kitten Rescue - Baby Kittens Cam powered by EXPLORE.org"
   },
   {
     "id": "red-sea-reef-kaust",
@@ -1124,12 +1098,11 @@ window.WW_CAMS = [
       "sea",
       "mediterranean"
     ],
-    "yt": "yhWvA-1LmDg",
+    "yt": "JlP0LBP8jak",
     "channelId": "UCoKYxeDmpM4xm3om9X6Zgqg",
     "tone": "#e8dcc6",
     "blurb": "An underwater view of fish weaving through a Mediterranean reef.",
-    "ytTitle": "AMP Isola Bergeggi Live Video",
-    "retired": "2026-10-27"
+    "ytTitle": "AMP Isola Bergeggi Live Video"
   },
   {
     "id": "kestrels-berlin",
@@ -1185,12 +1158,11 @@ window.WW_CAMS = [
       "nest",
       "island"
     ],
-    "yt": "kad6O4nF6bg",
+    "yt": "wDgZkzkOP-s",
     "channelId": "UCUtGnX65osNPQ98Y3-SSgpg",
     "tone": "#d9c7e8",
     "blurb": "A second bald eagle nest on Catalina, perched above the Pacific.",
-    "ytTitle": "Catalina West End Bald Eagle Overlook powered by EXPLORE.org",
-    "retired": "2026-10-27"
+    "ytTitle": "Mission Mountain Range powered by Explore.org"
   },
   {
     "id": "hula-lake",
@@ -1324,12 +1296,11 @@ window.WW_CAMS = [
       "cat",
       "zoo"
     ],
-    "yt": "-T1fw0_tKkM",
+    "yt": "lbon7ER65L0",
     "channelId": "UCB-zCeE3hpdWcnVaZePAwFQ",
     "tone": "#bcd3e6",
     "blurb": "A pride of lions, sometimes with cubs, in their zoo home.",
-    "ytTitle": "Rīgas Zoodārza lauvas",
-    "retired": "2026-10-27"
+    "ytTitle": "Rīgas Zoodārza lauvas"
   },
   {
     "id": "lambs-texel",
@@ -1382,12 +1353,11 @@ window.WW_CAMS = [
       "nest",
       "forest"
     ],
-    "yt": "sYBI8iRZbQU",
+    "yt": "UDulXGgIfQ8",
     "channelId": "UC8M9n-AqtbJm75xsKhWZk9w",
     "tone": "#f3cdb8",
     "blurb": "Golden eagles tending a huge nest deep in the Latvian forest.",
-    "ytTitle": "LVM Klinšu ērglis - Golden Eagle",
-    "retired": "2026-10-27"
+    "ytTitle": "LVM Klinšu ērglis - Golden Eagle"
   },
   {
     "id": "sharks-budapest",
@@ -1438,12 +1408,11 @@ window.WW_CAMS = [
       "farm",
       "barn"
     ],
-    "yt": "9fOxyCxpCDU",
+    "yt": "79DfDsVJ67U",
     "channelId": "UCGb_c0j3vHX1cJNYhhiAKYA",
     "tone": "#e8dcc6",
     "blurb": "Fuzzy donkeys hanging out in their barn.",
-    "ytTitle": "Goldy's Farm Barn Cam",
-    "retired": "2026-10-27"
+    "ytTitle": "Goldy's Farm Arena"
   },
   {
     "id": "black-storks-parnu",
@@ -1458,11 +1427,11 @@ window.WW_CAMS = [
       "nest",
       "forest"
     ],
-    "yt": "4-v_C_lCdU0",
+    "yt": "fN8mOsm4_Jw",
     "channelId": "UCCvBXTVqksM0wSaqd19N0Sg",
     "tone": "#d6e4cc",
     "blurb": "A rare black stork family nesting in the Estonian woods.",
-    "ytTitle": "Must-toonekurg 3 :: Ciconia nigra :: Black Stork"
+    "ytTitle": "Must toonekurg 4"
   },
   {
     "id": "penguins-pacific",
@@ -1476,11 +1445,11 @@ window.WW_CAMS = [
       "aquarium",
       "swim"
     ],
-    "yt": "eXfpXKP6qVE",
+    "yt": "wfuqjSNXZ14",
     "channelId": "UC8NnosPOvXnm0O1u5YnLQiw",
     "tone": "#bcd3e6",
     "blurb": "Magellanic penguins swimming, diving and waddling about.",
-    "ytTitle": "Penguin Habitat powered by EXPLORE.org"
+    "ytTitle": "West End Bald Eagle Nest Low Cam powered by EXPLORE.org"
   },
   {
     "id": "goshawks-riga",
@@ -1499,7 +1468,8 @@ window.WW_CAMS = [
     "channelId": "UCIcQwgP2i-fEshMBclDJENw",
     "tone": "#d9c7e8",
     "blurb": "Northern goshawks raising chicks in a forest nest.",
-    "ytTitle": "Vistu vanags 2"
+    "ytTitle": "Vistu vanags 2",
+    "retired": "2026-10-27"
   },
   {
     "id": "plains-kenya",
@@ -1520,7 +1490,8 @@ window.WW_CAMS = [
     "channelId": "UCiGOIXjFqy5_mUNxQNOMfHw",
     "tone": "#bfd8c8",
     "blurb": "Zebras and giraffes wandering across the Kenyan savanna.",
-    "ytTitle": "African Animal Lookout  Camera powered by EXPLORE.org"
+    "ytTitle": "African Animal Lookout  Camera powered by EXPLORE.org",
+    "retired": "2026-10-27"
   },
   {
     "id": "seals-budapest",
@@ -1534,7 +1505,7 @@ window.WW_CAMS = [
       "pool",
       "zoo"
     ],
-    "yt": "KwiMj0VvQpg",
+    "yt": "ZXwT563tbf4",
     "channelId": "UCzE4PjV4gHoDAsN6BXwsLQw",
     "tone": "#f3cdb8",
     "blurb": "Seals swimming laps and lounging around their pool.",
@@ -1589,7 +1560,7 @@ window.WW_CAMS = [
       "nest",
       "chicks"
     ],
-    "yt": "w_j90TWXti0",
+    "yt": "TA6vV8bkhc8",
     "channelId": "UC53e-XZICuGPeFg63ozsieA",
     "tone": "#e8dcc6",
     "blurb": "A long-running bald eagle nest in New Jersey. Eggs usually arrive in February.",
@@ -1624,7 +1595,7 @@ window.WW_CAMS = [
       "elephants",
       "zoo"
     ],
-    "yt": "UEFEjZHxNh8",
+    "yt": "i3kmj2b8zkA",
     "channelId": "UCzE4PjV4gHoDAsN6BXwsLQw",
     "tone": "#bcd3e6",
     "blurb": "Elephants wandering, dusting and playing in their zoo home.",
@@ -1664,7 +1635,7 @@ window.WW_CAMS = [
       "endangered",
       "mountains"
     ],
-    "yt": "RQ0oJke2fg8",
+    "yt": "ps-D-RJvPQ8",
     "channelId": "UCKqAJfYEVCPLbdgOm8QqSQg",
     "tone": "#bfd8c8",
     "blurb": "A rare chance to spot the endangered Iberian lynx in the wild.",
@@ -1682,11 +1653,11 @@ window.WW_CAMS = [
       "beach",
       "aquarium"
     ],
-    "yt": "ULoT2kODKlY",
+    "yt": "QoKy-rn66og",
     "channelId": "UC8NnosPOvXnm0O1u5YnLQiw",
     "tone": "#f3cdb8",
     "blurb": "Penguins waddling across their beach and diving into the pool.",
-    "ytTitle": "Penguin Beach powered by EXPLORE.org"
+    "ytTitle": "Philippine Eagles Cam powered by EXPLORE.org"
   },
   {
     "id": "storks-kirchzarten",
@@ -1700,11 +1671,11 @@ window.WW_CAMS = [
       "nest",
       "tree"
     ],
-    "yt": "RNKg_XD84UM",
+    "yt": "W2CicgFq5oo",
     "channelId": "UC7tC23i2En73AIIUjYWVQ-g",
     "tone": "#f6d58e",
     "blurb": "A stork nest perched in the treetops of the Black Forest valley.",
-    "ytTitle": "Live Storchennest Kirchzarten: Achtung! Neue Adresse . . ."
+    "ytTitle": "Live Storchennest Kirchzarten: Jungstörche Mars, Saturn und Jupiter besendert | Webcam Schwarzwald"
   },
   {
     "id": "hummingbirds-simi",
@@ -1741,7 +1712,8 @@ window.WW_CAMS = [
     "channelId": "UC83RKJs4eKHVE9v0YUyqzgg",
     "tone": "#e8dcc6",
     "blurb": "Young kittens tumbling, pouncing and napping in a playroom.",
-    "ytTitle": "Kitten Academy Live Stream"
+    "ytTitle": "Kitten Academy Live Stream",
+    "retired": "2026-10-27"
   },
   {
     "id": "bears-libearty",
@@ -1776,11 +1748,11 @@ window.WW_CAMS = [
       "cats",
       "play"
     ],
-    "yt": "VXBkOnop1-o",
+    "yt": "cswFQYam8Ic",
     "channelId": "UCrNicqyCSAUuxSzUi6VChvw",
     "tone": "#bcd3e6",
     "blurb": "A playroom of named kittens with big personalities.",
-    "ytTitle": "Kitkat Playroom LIVE: Meet beautiful Eden & sweet Zoe! Two members of Wyatt's Army 💕"
+    "ytTitle": "Kitkat Playroom LIVE: ⭐ Meet the Acronyms! Six wonderfully playful 7 week old kittens ⭐"
   },
   {
     "id": "woodland-pantry-maine",
@@ -1857,7 +1829,8 @@ window.WW_CAMS = [
     "channelId": "UCDodnv0cfstAmZRszqa-Xnw",
     "tone": "#f6d58e",
     "blurb": "White storks nesting on the windswept North Sea marshes.",
-    "ytTitle": "🔴 NABU Weißstorch-Webcam Hamburg"
+    "ytTitle": "🔴 NABU Weißstorch-Webcam Hamburg",
+    "retired": "2026-10-27"
   },
   {
     "id": "elk-refuge-jackson",
@@ -1910,11 +1883,11 @@ window.WW_CAMS = [
       "birds",
       "mountains"
     ],
-    "yt": "FmBaEiG_KR8",
+    "yt": "RMjn5B5X3xo",
     "channelId": "UCKqAJfYEVCPLbdgOm8QqSQg",
     "tone": "#d6e4cc",
     "blurb": "A mountain feeder that attracts colorful Spanish songbirds.",
-    "ytTitle": "🐥 Comedero de Aves 🔴 DIRECTO (Cámara 15 | Sierra Norte Madrid)"
+    "ytTitle": "Aves de Segovia 🔴 DIRECTO (Cámara 91 | Acueducto de Segovia)"
   },
   {
     "id": "puppies-ecad",
@@ -1929,11 +1902,11 @@ window.WW_CAMS = [
       "dogs",
       "service dog"
     ],
-    "yt": "Xx8fMrU8d6E",
+    "yt": "Qeq2Kax0v64",
     "channelId": "UCfC0RcYzDQcFtHrce2mpvbA",
     "tone": "#bcd3e6",
     "blurb": "Newborn puppies who will grow up to be service dogs.",
-    "ytTitle": "ECAD Whelping powered by EXPLORE.org"
+    "ytTitle": "Full House Puppy Cam at Warrior Canine Connection powered by EXPLORE.org"
   },
   {
     "id": "squirrels-dc",
@@ -1948,11 +1921,11 @@ window.WW_CAMS = [
       "nest",
       "tree"
     ],
-    "yt": "6Gf23W0fUb4",
+    "yt": "Ml8go-qfGqg",
     "channelId": "UCgGmACGEil_QEVQOKOBPJrg",
     "tone": "#d9c7e8",
     "blurb": "Baby squirrels snuggled in a nest high in a city tree.",
-    "ytTitle": "SquirrelNest.Live 🔴24/7 200 squirrel cameras real-time live"
+    "ytTitle": "Replay of Lily and Jelly Bean - baby squirrel"
   },
   {
     "id": "alligators-st-augustine",
@@ -1967,11 +1940,11 @@ window.WW_CAMS = [
       "swamp",
       "reptile"
     ],
-    "yt": "M4P_GzA6H80",
+    "yt": "OY4V_AppZ6s",
     "channelId": "UC8NnosPOvXnm0O1u5YnLQiw",
     "tone": "#bfd8c8",
     "blurb": "Alligators lurking below while roseate spoonbills nest above.",
-    "ytTitle": "Alligator and Spoonbill Swamp Cam powered by EXPLORE.org"
+    "ytTitle": "Fraser Point Bald Eagle Nest 2 powered by EXPLORE.org"
   },
   {
     "id": "polar-bears-alaska",
@@ -2008,11 +1981,11 @@ window.WW_CAMS = [
       "bird",
       "birds"
     ],
-    "yt": "VfFfS64rtZE",
+    "yt": "aT1adgYSfbc",
     "channelId": "UC8NnosPOvXnm0O1u5YnLQiw",
     "tone": "#f6d58e",
     "blurb": "A rainforest fruit feeder that brings in toucans and bright tanagers.",
-    "ytTitle": "Panama Fruit Feeder Cam at Canopy Lodge powered by EXPLORE.org"
+    "ytTitle": "LIVE West End Bald Eagle Nest Cam: Catalina Island - IWS | explore.org"
   },
   {
     "id": "ospreys-charlo",
@@ -2026,11 +1999,11 @@ window.WW_CAMS = [
       "nest",
       "chicks"
     ],
-    "yt": "gYkci0rH8Ac",
+    "yt": "_xhLV-TJpd8",
     "channelId": "UC8NnosPOvXnm0O1u5YnLQiw",
     "tone": "#c9d6e8",
     "blurb": "An osprey family nesting in western Montana. Busy from April to August.",
-    "ytTitle": "Charlo Montana Osprey Nest powered by EXPLORE.org"
+    "ytTitle": "LIVE Black Eagle Nest Cam: South Africa - Africam | explore.org"
   },
   {
     "id": "giraffes-animal-adventure",
@@ -2044,7 +2017,7 @@ window.WW_CAMS = [
       "zoo",
       "barn"
     ],
-    "yt": "Be9T8zdidS8",
+    "yt": "oufxM2Rxh-0",
     "channelId": "UClnQCgFa9lCBL-KXZMOoO9Q",
     "tone": "#e8dcc6",
     "blurb": "The giraffe family made famous by April the giraffe.",
@@ -2067,7 +2040,8 @@ window.WW_CAMS = [
     "channelId": "UCLomfQTJ5sg9WuPpAf5TkYw",
     "tone": "#d6e4cc",
     "blurb": "Bald eagles nesting on Alaska's Kenai Peninsula.",
-    "ytTitle": "EagleCam"
+    "ytTitle": "EagleCam",
+    "retired": "2026-10-27"
   },
   {
     "id": "sheep-farm-sanctuary",
@@ -2102,11 +2076,11 @@ window.WW_CAMS = [
       "woodpecker",
       "hawk"
     ],
-    "yt": "X1b271kOSfA",
+    "yt": "y9t1g8Ike6g",
     "channelId": "UCx8KaDsE0B4HsQdNBCsvyaA",
     "tone": "#d9c7e8",
     "blurb": "A feeder visited by more than 30 kinds of birds, and the occasional hawk.",
-    "ytTitle": "Link to CURRENT LIVESTREAM - https://youtube.com/live/y9t1g8Ike6g"
+    "ytTitle": "LIVE Bird Feeder & Wildlife Cam - Gettysburg, PA"
   },
   {
     "id": "ospreys-hog-island",
@@ -2140,11 +2114,11 @@ window.WW_CAMS = [
       "cardinal",
       "finch"
     ],
-    "yt": "Hu0zIGBCOsI",
+    "yt": "zjwJ7sqOJ8Y",
     "channelId": "UCG1uo50XHSYJXArjRdENvfA",
     "tone": "#f3cdb8",
     "blurb": "Cardinals, finches and friends at a Carolina feeder.",
-    "ytTitle": "North Carolina Bird Feeder Daily Live Stream, Southeast USA FeederWatch ~60 species Identified"
+    "ytTitle": "🔴North Carolina Bird Feeder Daily Live Stream 🐦The Most Cardinals on YouTube"
   },
   {
     "id": "wolves-ely",
@@ -2163,7 +2137,8 @@ window.WW_CAMS = [
     "channelId": "UC-2KSeUU5SMCX6XLRD-AEvw",
     "tone": "#f6d58e",
     "blurb": "A pack of gray wolves in the northern Minnesota woods.",
-    "ytTitle": "International Wolf Center South Camera powered by EXPLORE.org"
+    "ytTitle": "International Wolf Center South Camera powered by EXPLORE.org",
+    "retired": "2026-10-27"
   },
   {
     "id": "eagles-decorah",
@@ -2198,11 +2173,11 @@ window.WW_CAMS = [
       "foal",
       "farm"
     ],
-    "yt": "MbTK1XpyMog",
+    "yt": "WvEDJPPb5I8",
     "channelId": "UChImhh3aWdr4OcD2I1s_pvA",
     "tone": "#e8dcc6",
     "blurb": "Mini horses and ponies in a foaling stall, where spring brings new foals.",
-    "ytTitle": "The Foaling Show • Stall 2 • Horse and Pony Live Cam"
+    "ytTitle": "The Foaling Show • Stall 1 • Horse and Pony Live Cam"
   },
   {
     "id": "hedgehog-feeder-recke",
@@ -2218,11 +2193,11 @@ window.WW_CAMS = [
       "night",
       "garden"
     ],
-    "yt": "4kRzwJXaeIM",
+    "yt": "l0nT3wSnxEo",
     "channelId": "UC-HQ-oPvL148RmDxpV4jzlQ",
     "tone": "#d6e4cc",
     "blurb": "Songbirds by day and hedgehogs by night at a German garden feeder.",
-    "ytTitle": "LIVE 4K 60fps Bird Feeder Cam - Hedgehog & Bird Watching (3D Audio) ASMR HQ"
+    "ytTitle": "LIVE 4K Bird Feeder Cam (day time) & Hedgehog Feeder Cam (at night) - Uplengen"
   },
   {
     "id": "cats-ohio-feline-rescue",
@@ -2236,11 +2211,11 @@ window.WW_CAMS = [
       "rescue",
       "sanctuary"
     ],
-    "yt": "kikFDudufQs",
+    "yt": "tEsfi0xZzUs",
     "channelId": "UClB2FZ7Qvwq0Ons_6jN1lAQ",
     "tone": "#bcd3e6",
     "blurb": "Rescued cats napping, playing and waiting for adoption.",
-    "ytTitle": "Friends of Felines Rescue Center"
+    "ytTitle": "Friends of Felines Rescue Center Kabana Cam"
   },
   {
     "id": "eagles-danube-ipoly",
@@ -2259,7 +2234,8 @@ window.WW_CAMS = [
     "channelId": "UC7AiqN6-H0HxVcyW4qjhtnw",
     "tone": "#d9c7e8",
     "blurb": "Huge white-tailed eagles raising chicks near the Danube.",
-    "ytTitle": "🦅 Rétisas Élő Közvetítés – Egy Királyi Ragadozó Fészke"
+    "ytTitle": "🦅 Rétisas Élő Közvetítés – Egy Királyi Ragadozó Fészke",
+    "retired": "2026-10-27"
   },
   {
     "id": "ospreys-rutland",
@@ -2273,11 +2249,11 @@ window.WW_CAMS = [
       "nest",
       "lake"
     ],
-    "yt": "zxN8Sb_xHp0",
+    "yt": "RwfrtNaznW4",
     "channelId": "UCJ8DHJ5VCVLm-o_Wo65VBaA",
     "tone": "#bfd8c8",
     "blurb": "England's best-known osprey nest, overlooking Rutland Water. Spring to late summer.",
-    "ytTitle": "LRWT - Manton Bay Ospreys Live Webcam"
+    "ytTitle": "LRWT - Rutland Water Ospreys Lagoon 4 Live Webcam (Wide Angle)"
   },
   {
     "id": "storks-suwalki",
@@ -2295,7 +2271,8 @@ window.WW_CAMS = [
     "channelId": "UCsXNCikvhJ2HawrZ5eywpGg",
     "tone": "#f3cdb8",
     "blurb": "Storks nesting in the green hills of northeastern Poland.",
-    "ytTitle": "Sidorówka bociany – transmisja na żywo (Storks live video broadcast)"
+    "ytTitle": "Sidorówka bociany – transmisja na żywo (Storks live video broadcast)",
+    "retired": "2026-10-27"
   },
   {
     "id": "pigs-ruhr",
@@ -2313,7 +2290,8 @@ window.WW_CAMS = [
     "channelId": "UCVDPWsGVjCXgnX4GC0Iqv3g",
     "tone": "#f6d58e",
     "blurb": "Free-range pigs rooting and wallowing by the river.",
-    "ytTitle": "Live Camera Axis P1435-LE"
+    "ytTitle": "Live Camera Axis P1435-LE",
+    "retired": "2026-10-27"
   },
   {
     "id": "storks-fulltofta",
@@ -2327,7 +2305,7 @@ window.WW_CAMS = [
       "nest",
       "sweden"
     ],
-    "yt": "paLJSse35_k",
+    "yt": "lvIdpN-oF40",
     "channelId": "UCIUsuJRycEwBhxqYkOjwyhg",
     "tone": "#c9d6e8",
     "blurb": "Storks building nests and raising young in southern Sweden.",
@@ -2346,11 +2324,11 @@ window.WW_CAMS = [
       "tower",
       "village"
     ],
-    "yt": "m2Jtoigg-PY",
+    "yt": "3BZ-rgidYyU",
     "channelId": "UCg6OElsAGYmkuSySkZpaNGw",
     "tone": "#e8dcc6",
     "blurb": "White storks nesting on medieval towers in a Spanish village.",
-    "ytTitle": "EN DIRECTO 🔴 Madrigal de las Altas Torres  - Nido de cigüeña nº 1"
+    "ytTitle": "🆕 NOVEDAD 🆕 Lechuza común · [Exterior] · Reserva Natural Riet Vell -🔴DIRECTO Delta del Ebro"
   },
   {
     "id": "ospreys-spean-bridge",
@@ -2409,7 +2387,8 @@ window.WW_CAMS = [
     "channelId": "UC6OFMtjlgAOAq5kJwmt-lpA",
     "tone": "#d9c7e8",
     "blurb": "Hens scratching, dust-bathing and gossiping on a free-range farm.",
-    "ytTitle": "Kipster Cam 7 NL"
+    "ytTitle": "Kipster Cam 7 NL",
+    "retired": "2026-10-27"
   },
   {
     "id": "deer-nordfjord",
@@ -2428,5 +2407,124 @@ window.WW_CAMS = [
     "tone": "#bfd8c8",
     "blurb": "Red deer grazing a meadow by a Norwegian fjord, mostly at dawn and dusk.",
     "ytTitle": "Nordfjordhjort Live"
+  },
+  {
+    "id": "auto-cincinnati-zoo-giraffe-birth-wat-2pyrm4",
+    "title": "Cincinnati Zoo Giraffe Birth Watch",
+    "place": "The Cincinnati Zoo & Botanical Garden",
+    "cat": "safari",
+    "tags": [
+      "giraffe",
+      "zoo"
+    ],
+    "yt": "2PYRm4vIwN0",
+    "channelId": "UCE3VoxyYmyQCReOXk2ogsVg",
+    "tone": "#d9c7e8",
+    "blurb": "Giraffe yard outdoor live stream: Tessa is due to give birth any day now.",
+    "ytTitle": "Cincinnati Zoo Giraffe Birth Watch - Indoor",
+    "auto": true,
+    "added": "2026-10-27"
+  },
+  {
+    "id": "auto-moody-gardens-penguin-cam-hhp4rj",
+    "title": "Moody Gardens Penguin Cam",
+    "place": "Moody Gardens",
+    "cat": "ocean",
+    "tags": [
+      "aquarium",
+      "reef",
+      "sharks",
+      "penguin",
+      "penguins",
+      "animal",
+      "animals"
+    ],
+    "yt": "HHp4rjhJsWI",
+    "channelId": "UCKDM9GYy91kKpNOGZVS0ZFg",
+    "tone": "#bfd8c8",
+    "blurb": "Plan your trip: More LIVE Webcams: Learn more about the Aquarium Pyramid: 🐧 Watch our penguins live 24/7 from the Aquarium Pyramid at Moody Gardens in Galveston, Texas.",
+    "ytTitle": "Moody Gardens Penguin Cam LIVE | Penguin Habitat Stream at the Aquarium in Galveston, Texas",
+    "auto": true,
+    "added": "2026-10-27"
+  },
+  {
+    "id": "auto-the-best-aquarium-kcl3bh",
+    "title": "The Best Aquarium",
+    "place": "Ocean Relaxation Film",
+    "cat": "ocean",
+    "tags": [
+      "aquarium",
+      "reef",
+      "coral",
+      "jellyfish",
+      "fish",
+      "underwater"
+    ],
+    "yt": "kCl3bHPcw1I",
+    "channelId": "UC0GhshjHVIjGf39EWsvlagQ",
+    "tone": "#f3cdb8",
+    "blurb": "The Best 4K Aquarium - Dive Into The Mesmerizing Underwater Realm, Sea Jellyfish, Coral Reefs #9 The Best 4K Aquarium - Dive Into The Mesmerizing Underwater…",
+    "ytTitle": "The Best 4K Aquarium - Dive Into The Mesmerizing Underwater Realm, Sea Jellyfish, Coral Reefs #9",
+    "auto": true,
+    "added": "2026-10-27"
+  },
+  {
+    "id": "auto-wildlife-xsou8j",
+    "title": "Wildlife",
+    "place": "Africam",
+    "cat": "safari",
+    "tags": [
+      "safari",
+      "wildlife",
+      "animals"
+    ],
+    "yt": "XsOU8JnEpNM",
+    "channelId": "UCuoNAKa3P0QR1Lw9QdpmoVg",
+    "tone": "#f6d58e",
+    "blurb": "ol Donyo Lodge is located on over 111,000 hectares of private land in the heart of the Chyulu Hills, between Kenya’s Tsavo and Amboseli National Parks.",
+    "ytTitle": "ol Donyo Lodge | Wildlife Live Stream – Kenya",
+    "auto": true,
+    "added": "2026-10-27"
+  },
+  {
+    "id": "auto-cat-tv-no-ads-unlimited-wild-bir-pwjidu",
+    "title": "CAT TV NO ADS Unlimited Wild Birds and",
+    "place": "Red Squirrel Studios",
+    "cat": "cuddly",
+    "tags": [
+      "cat",
+      "cats",
+      "dogs",
+      "bird",
+      "birds",
+      "feeder",
+      "woodpecker",
+      "wildlife"
+    ],
+    "yt": "PWJiDUUSNvs",
+    "channelId": "UC-DqJ54Dx0a5SzANKdTKwPg",
+    "tone": "#c9d6e8",
+    "blurb": "🔴24/7 LIVE CAT TV NO ADS😺Unlimited Wild Birds and Squirrels at Autumn Festival 😻All Day Uninterrupted Nature Fun for Everyone 4K HDR TV for cats, dogs, parrots, budgies and all nature lovers.",
+    "ytTitle": "🔴24/7 LIVE CAT TV NO ADS😺 Unlimited Wild Birds and Squirrels at Autumn Festival",
+    "auto": true,
+    "added": "2026-10-27"
+  },
+  {
+    "id": "auto-friends-of-felines-rescue-center-vrpbvo",
+    "title": "Friends of Felines Rescue Center (FFRC)",
+    "place": "FOFRescueCenter",
+    "cat": "cuddly",
+    "tags": [
+      "cat",
+      "cats",
+      "rescue"
+    ],
+    "yt": "VRpB_vOKbgw",
+    "channelId": "UClB2FZ7Qvwq0Ons_6jN1lAQ",
+    "tone": "#e8dcc6",
+    "blurb": "The Rescue has multiple camera streams.",
+    "ytTitle": "Friends of Felines Rescue Center (FFRC)",
+    "auto": true,
+    "added": "2026-10-27"
   }
 ];
