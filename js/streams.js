@@ -2448,27 +2448,6 @@ window.WW_CAMS = [
     "added": "2026-10-27"
   },
   {
-    "id": "auto-the-best-aquarium-kcl3bh",
-    "title": "The Best Aquarium",
-    "place": "Ocean Relaxation Film",
-    "cat": "ocean",
-    "tags": [
-      "aquarium",
-      "reef",
-      "coral",
-      "jellyfish",
-      "fish",
-      "underwater"
-    ],
-    "yt": "kCl3bHPcw1I",
-    "channelId": "UC0GhshjHVIjGf39EWsvlagQ",
-    "tone": "#f3cdb8",
-    "blurb": "The Best 4K Aquarium - Dive Into The Mesmerizing Underwater Realm, Sea Jellyfish, Coral Reefs #9 The Best 4K Aquarium - Dive Into The Mesmerizing Underwater…",
-    "ytTitle": "The Best 4K Aquarium - Dive Into The Mesmerizing Underwater Realm, Sea Jellyfish, Coral Reefs #9",
-    "auto": true,
-    "added": "2026-10-27"
-  },
-  {
     "id": "auto-wildlife-xsou8j",
     "title": "Wildlife",
     "place": "Africam",
@@ -2483,29 +2462,6 @@ window.WW_CAMS = [
     "tone": "#f6d58e",
     "blurb": "ol Donyo Lodge is located on over 111,000 hectares of private land in the heart of the Chyulu Hills, between Kenya’s Tsavo and Amboseli National Parks.",
     "ytTitle": "ol Donyo Lodge | Wildlife Live Stream – Kenya",
-    "auto": true,
-    "added": "2026-10-27"
-  },
-  {
-    "id": "auto-cat-tv-no-ads-unlimited-wild-bir-pwjidu",
-    "title": "CAT TV NO ADS Unlimited Wild Birds and",
-    "place": "Red Squirrel Studios",
-    "cat": "cuddly",
-    "tags": [
-      "cat",
-      "cats",
-      "dogs",
-      "bird",
-      "birds",
-      "feeder",
-      "woodpecker",
-      "wildlife"
-    ],
-    "yt": "PWJiDUUSNvs",
-    "channelId": "UC-DqJ54Dx0a5SzANKdTKwPg",
-    "tone": "#c9d6e8",
-    "blurb": "🔴24/7 LIVE CAT TV NO ADS😺Unlimited Wild Birds and Squirrels at Autumn Festival 😻All Day Uninterrupted Nature Fun for Everyone 4K HDR TV for cats, dogs, parrots, budgies and all nature lovers.",
-    "ytTitle": "🔴24/7 LIVE CAT TV NO ADS😺 Unlimited Wild Birds and Squirrels at Autumn Festival",
     "auto": true,
     "added": "2026-10-27"
   },

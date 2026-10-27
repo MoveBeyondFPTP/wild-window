@@ -67,7 +67,8 @@ const EXCLUDE = [
   "simulator", "simulation", "cartoon", "kids song", "nursery", "highlights", "compilation", "replay", "rerun",
   "earthquake", "traffic", "train", "railcam", "airport", "iss ", "space station", "storm chas", "hunting",
   "fishing", "fish tank music", "sleep music", "relaxing music", "meditation music", "asmr", "podcast",
-  "reaction", "q&a", "shopping", "sale", "giveaway", "crypto", "casino", "church", "sermon", "ai generated"
+  "reaction", "q&a", "shopping", "sale", "giveaway", "crypto", "casino", "church", "sermon", "ai generated",
+  "relaxation", "relaxing", "film", "cat tv", "for cats", "dog tv", "screensaver", "ambience", "ambient", "no ads", "8 hours", "10 hours"
 ];
 
 /* ------------------------------------------------------------------ helpers */
