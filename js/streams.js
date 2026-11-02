@@ -456,7 +456,8 @@ window.WW_CAMS = [
     ],
     "channel": "UCiGOIXjFqy5_mUNxQNOMfHw",
     "tone": "#e8dcc6",
-    "blurb": "explore.org's main African wildlife stream, at a waterhole or river depending on the season."
+    "blurb": "explore.org's main African wildlife stream, at a waterhole or river depending on the season.",
+    "retired": "2026-11-02"
   },
   {
     "id": "monkeys-awaji",
@@ -514,7 +515,7 @@ window.WW_CAMS = [
     "channelId": "UCeL2LSl91k2VccR7XEh5IKg",
     "tone": "#d9c7e8",
     "blurb": "A foster room full of tiny rescue kittens. Maximum cuteness, minimal sleep.",
-    "ytTitle": "LIVE INTAKE: New kitten who needs our help! 🐾🙀"
+    "ytTitle": "New kitten who needs our help! 🐾🙀"
   },
   {
     "id": "shark-lagoon-calacademy",
@@ -1408,7 +1409,7 @@ window.WW_CAMS = [
       "farm",
       "barn"
     ],
-    "yt": "79DfDsVJ67U",
+    "yt": "xlWrjud-JiI",
     "channelId": "UCGb_c0j3vHX1cJNYhhiAKYA",
     "tone": "#e8dcc6",
     "blurb": "Fuzzy donkeys hanging out in their barn.",
@@ -1752,7 +1753,7 @@ window.WW_CAMS = [
     "channelId": "UCrNicqyCSAUuxSzUi6VChvw",
     "tone": "#bcd3e6",
     "blurb": "A playroom of named kittens with big personalities.",
-    "ytTitle": "Kitkat Playroom LIVE: ⭐ Meet the Acronyms! Six wonderfully playful 7 week old kittens ⭐"
+    "ytTitle": "Kitkat Playroom LIVE: ⭐ Meet the Acronyms & Marley! Seven wonderfully playful kittens ⭐"
   },
   {
     "id": "woodland-pantry-maine",
@@ -1772,7 +1773,8 @@ window.WW_CAMS = [
     "channelId": "UCdmPhiIJ-s7MJG2WtM7nbUw",
     "tone": "#d9c7e8",
     "blurb": "A North Woods feeder where birds drop by and deer come to visit.",
-    "ytTitle": "Ryan's Bird Buffet at Brownville's Food Pantry For Deer"
+    "ytTitle": "Ryan's Bird Buffet at Brownville's Food Pantry For Deer",
+    "retired": "2026-11-02"
   },
   {
     "id": "alpacas-marthas-vineyard",
@@ -1845,11 +1847,11 @@ window.WW_CAMS = [
       "mountains",
       "wyoming"
     ],
-    "yt": "_2rvoH5oDcg",
+    "yt": "VrV76oqxvS8",
     "channelId": "UCEpDjqeFIGTqHwk-uULx72Q",
     "tone": "#c9d6e8",
     "blurb": "Thousands of elk gather here each winter below the Tetons.",
-    "ytTitle": "National Museum of Wildlife Art - Live Elk Refuge"
+    "ytTitle": "Spring Creek Ranch - SeeJH.ai"
   },
   {
     "id": "polar-bears-kansas-city",
@@ -2211,7 +2213,7 @@ window.WW_CAMS = [
       "rescue",
       "sanctuary"
     ],
-    "yt": "tEsfi0xZzUs",
+    "yt": "B7NHZhQxkzE",
     "channelId": "UClB2FZ7Qvwq0Ons_6jN1lAQ",
     "tone": "#bcd3e6",
     "blurb": "Rescued cats napping, playing and waiting for adoption.",
@@ -2475,12 +2477,131 @@ window.WW_CAMS = [
       "cats",
       "rescue"
     ],
-    "yt": "VRpB_vOKbgw",
+    "yt": "iNhKMpI9Hak",
     "channelId": "UClB2FZ7Qvwq0Ons_6jN1lAQ",
     "tone": "#e8dcc6",
     "blurb": "The Rescue has multiple camera streams.",
     "ytTitle": "Friends of Felines Rescue Center (FFRC)",
     "auto": true,
     "added": "2026-10-27"
+  },
+  {
+    "id": "auto-backyard-bird-feeder-new-jersey-efszbl",
+    "title": "Backyard Bird Feeder New Jersey",
+    "place": "Holy Mount Athos Voices Greece",
+    "cat": "birds",
+    "tags": [
+      "cat",
+      "dog",
+      "bird",
+      "birds",
+      "feeder",
+      "wildlife",
+      "animals"
+    ],
+    "yt": "efsZblNShVo",
+    "channelId": "UCVgqUWjhBiAHk76p-jqrZeg",
+    "tone": "#c9d6e8",
+    "blurb": "Welcome to our LIVE backyard bird feeder in New Jersey, USA!",
+    "ytTitle": "🔴 LIVE Backyard Bird Feeder New Jersey | Cardinals, Goldfinches, Squirrels & Peaceful Nature Sounds",
+    "auto": true,
+    "added": "2026-11-02"
+  },
+  {
+    "id": "auto-animal-ambassador-cams-kvxa6v",
+    "title": "Animal Ambassador Cams",
+    "place": "Alveus Sanctuary",
+    "cat": "cuddly",
+    "tags": [
+      "sanctuary",
+      "wildlife",
+      "animal"
+    ],
+    "yt": "-K-VxA6v7QM",
+    "channelId": "UCbJ-1yM55NHrR1GS9hhPuvg",
+    "tone": "#e8dcc6",
+    "blurb": "Alveus is a 501(c)(3) nonprofit org functioning as a wildlife sanctuary & virtual education center, aiming to unite online users for conservation!",
+    "ytTitle": "Animal Ambassador 24/7 Live Cams - Alveus Sanctuary",
+    "auto": true,
+    "added": "2026-11-02"
+  },
+  {
+    "id": "auto-big-bear-bald-eagle-wide-view-41eq4v",
+    "title": "Big Bear Bald Eagle Wide View",
+    "place": "FOBBV CAM",
+    "cat": "birds",
+    "tags": [
+      "eagle",
+      "bear"
+    ],
+    "yt": "41eq4VzCYc4",
+    "channelId": "UCsFgbVuhRrPV5FqyN7kOD8g",
+    "tone": "#d6e4cc",
+    "blurb": "🔵 Cam1: 🔗Recap: 🔗Friends of Big Bear Valley (FOBBV) 🔗Instagram 🔗Facebook 🔗Private Facebook Group 🔗TikTok 🔗Moon Camp…",
+    "ytTitle": "Big Bear Bald Eagle Wide View - Cam 2",
+    "auto": true,
+    "added": "2026-11-02"
+  },
+  {
+    "id": "auto-the-best-aquarium-xcltpc",
+    "title": "The Best Aquarium",
+    "place": "4K Ocean World",
+    "cat": "ocean",
+    "tags": [
+      "aquarium",
+      "reef",
+      "coral",
+      "jellyfish",
+      "fish",
+      "dolphins",
+      "underwater",
+      "animal"
+    ],
+    "yt": "xCLTpcx9aO8",
+    "channelId": "UCkwi3H7xoYTJKycMI9YAn0w",
+    "tone": "#bcd3e6",
+    "blurb": "The Best 4K Aquarium - Dive Into The Mesmerizing Underwater Realm, Sea Jellyfish, Coral Reefs Dive into the mesmerizing world of coral reef fish with our stunning 4K ULTRA HD Aquarium video!",
+    "ytTitle": "The Best 4K Aquarium - Dive Into The Mesmerizing Underwater Realm, Sea Jellyfish, Coral Reefs",
+    "auto": true,
+    "added": "2026-11-02"
+  },
+  {
+    "id": "auto-sea-otter-cam-9mg9po",
+    "title": "Sea Otter Cam",
+    "place": "Vancouver Aquarium",
+    "cat": "cuddly",
+    "tags": [
+      "otter",
+      "otters",
+      "aquarium"
+    ],
+    "yt": "9mg9PoFEX2U",
+    "channelId": "UCbzl-qtfTKY9QNgtnqmuyBw",
+    "tone": "#d9c7e8",
+    "blurb": "Watch our playful otters explore their habitat online before you see them in person during your next visit to Vancouver Aquarium.",
+    "ytTitle": "Sea Otter Cam | Vancouver Aquarium",
+    "auto": true,
+    "added": "2026-11-02"
+  },
+  {
+    "id": "auto-the-crow-s-nest-7jxsxf",
+    "title": "The Crow's Nest",
+    "place": "TinyKittens HQ",
+    "cat": "birds",
+    "tags": [
+      "kitten",
+      "kittens",
+      "cat",
+      "cats",
+      "rescue",
+      "nest"
+    ],
+    "yt": "7jxSXfdK0Jg",
+    "channelId": "UCeL2LSl91k2VccR7XEh5IKg",
+    "tone": "#bfd8c8",
+    "blurb": "Crow was born with a condition called atresia ani, with rectovaginal fistula.",
+    "ytTitle": "The Crow's Nest 🐾🥰",
+    "auto": true,
+    "added": "2026-11-02"
   }
 ];
