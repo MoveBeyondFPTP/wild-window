@@ -155,7 +155,7 @@ window.WW_CAMS = [
       "aquarium",
       "swim"
     ],
-    "yt": "bV4EiHr53ek",
+    "yt": "tkh8PmqHEdA",
     "channelId": "UCZvXaNYIcapCEcaJe_2cP7A",
     "tone": "#c9e0ec",
     "blurb": "A busy colony of African penguins waddling, swimming and squabbling over the best rocks.",
@@ -515,7 +515,7 @@ window.WW_CAMS = [
     "channelId": "UCeL2LSl91k2VccR7XEh5IKg",
     "tone": "#d9c7e8",
     "blurb": "A foster room full of tiny rescue kittens. Maximum cuteness, minimal sleep.",
-    "ytTitle": "New kitten who needs our help! 🐾🙀"
+    "ytTitle": "Tater Tot Tiny Paws: new kitten who needs our help! 🐾🙀"
   },
   {
     "id": "shark-lagoon-calacademy",
@@ -882,7 +882,8 @@ window.WW_CAMS = [
     "channelId": "UCzbydNAcB7jeJGssRFb_dCA",
     "tone": "#f3cdb8",
     "blurb": "Lesser kestrels, tiny falcons, nesting in a nature park.",
-    "ytTitle": "6 Live Birdcams | One Stream • Real Wildlife 24/7 – Charter Group Birdcams"
+    "ytTitle": "6 Live Birdcams | One Stream • Real Wildlife 24/7 – Charter Group Birdcams",
+    "retired": "2026-11-09"
   },
   {
     "id": "sheep-texel-dunes",
@@ -1769,12 +1770,11 @@ window.WW_CAMS = [
       "forest",
       "snow"
     ],
-    "yt": "47dcM4M16Ic",
+    "yt": "_NpIygAK0Lw",
     "channelId": "UCdmPhiIJ-s7MJG2WtM7nbUw",
     "tone": "#d9c7e8",
     "blurb": "A North Woods feeder where birds drop by and deer come to visit.",
-    "ytTitle": "Ryan's Bird Buffet at Brownville's Food Pantry For Deer",
-    "retired": "2026-11-02"
+    "ytTitle": "Ryan's Bird Buffet at Brownville's Food Pantry For Deer"
   },
   {
     "id": "alpacas-marthas-vineyard",
@@ -1808,7 +1808,7 @@ window.WW_CAMS = [
       "rescue",
       "sanctuary"
     ],
-    "yt": "PcAOecvAh1U",
+    "yt": "e2R11FJN0QI",
     "channelId": "UC6B91hbZkdiDjWdu00QCcew",
     "tone": "#f3cdb8",
     "blurb": "Rescued tigers lounging in their habitat at a big cat refuge.",
@@ -1827,12 +1827,11 @@ window.WW_CAMS = [
       "marsh",
       "coast"
     ],
-    "yt": "XndXbnjdth0",
+    "yt": "vyxlGNzqakQ",
     "channelId": "UCDodnv0cfstAmZRszqa-Xnw",
     "tone": "#f6d58e",
     "blurb": "White storks nesting on the windswept North Sea marshes.",
-    "ytTitle": "🔴 NABU Weißstorch-Webcam Hamburg",
-    "retired": "2026-10-27"
+    "ytTitle": "Nabu Weißstorch-Webcam Hamburg"
   },
   {
     "id": "elk-refuge-jackson",
@@ -2097,11 +2096,11 @@ window.WW_CAMS = [
       "ocean",
       "chicks"
     ],
-    "yt": "O6Ir_sMsTtc",
+    "yt": "ngoZMdZ_jeA",
     "channelId": "UC8NnosPOvXnm0O1u5YnLQiw",
     "tone": "#bfd8c8",
     "blurb": "Audubon's famous osprey nest on the Maine coast. Back each spring.",
-    "ytTitle": "Audubon Osprey Nest powered by EXPLORE.org"
+    "ytTitle": "Live  Kings River Eagle Cam | Explore.org"
   },
   {
     "id": "feeder-carolina",
@@ -2135,12 +2134,11 @@ window.WW_CAMS = [
       "snow",
       "pack"
     ],
-    "yt": "DRxYSIoBusQ",
+    "yt": "OOT6YlOYgaU",
     "channelId": "UC-2KSeUU5SMCX6XLRD-AEvw",
     "tone": "#f6d58e",
     "blurb": "A pack of gray wolves in the northern Minnesota woods.",
-    "ytTitle": "International Wolf Center South Camera powered by EXPLORE.org",
-    "retired": "2026-10-27"
+    "ytTitle": "Kitten Rescue Cat Cam powered by EXPLORE.org"
   },
   {
     "id": "eagles-decorah",
@@ -2603,5 +2601,127 @@ window.WW_CAMS = [
     "ytTitle": "The Crow's Nest 🐾🥰",
     "auto": true,
     "added": "2026-11-02"
+  },
+  {
+    "id": "auto-deer-cam-356iya",
+    "title": "Deer Cam",
+    "place": "Deer Streams",
+    "cat": "safari",
+    "tags": [
+      "deer",
+      "animal"
+    ],
+    "yt": "35_6IYarmgY",
+    "channelId": "UC-ywdvCNkkYdoIsKWLHCvog",
+    "tone": "#f3cdb8",
+    "blurb": "Live deer cam, 24/7 whitetail deer feeding live from Canada.",
+    "ytTitle": "🦌 Live Deer Cam 24/7 | Whitetail Deer Feeding Live from Canada",
+    "auto": true,
+    "added": "2026-11-09"
+  },
+  {
+    "id": "auto-lions-vs-leopards-vs-hyenas-miqe9o",
+    "title": "Lions vs Leopards vs Hyenas",
+    "place": "Nat Geo Animals",
+    "cat": "safari",
+    "tags": [
+      "dogs",
+      "lions",
+      "leopard",
+      "wildlife",
+      "animal",
+      "animals"
+    ],
+    "yt": "MiQe9ob9aDc",
+    "channelId": "UCDPk9MG2RexnOMGTD-YnSnA",
+    "tone": "#f6d58e",
+    "blurb": "Leopard Rock Saba the leopard is the most spectacular and resourceful hunter of the Savage Kingdom, but her skills are put to the test as she fights to defend her cubs.",
+    "ytTitle": "🔴 LIVE: Predator Battles: Lions vs Leopards vs Hyenas | Savage Kingdom Livestream | Nat Geo Animals",
+    "auto": true,
+    "added": "2026-11-09"
+  },
+  {
+    "id": "auto-sea-otter-cam-2-kxhub0",
+    "title": "Sea Otter Cam 2",
+    "place": "Vancouver Aquarium",
+    "cat": "cuddly",
+    "tags": [
+      "otter",
+      "otters",
+      "aquarium"
+    ],
+    "yt": "_KXHUb0wFRE",
+    "channelId": "UCbzl-qtfTKY9QNgtnqmuyBw",
+    "tone": "#c9d6e8",
+    "blurb": "Watch our playful otters explore their habitat online before you see them in person during your next visit to Vancouver Aquarium.",
+    "ytTitle": "Sea Otter Cam 2 | Vancouver Aquarium",
+    "auto": true,
+    "added": "2026-11-09"
+  },
+  {
+    "id": "auto-wildlife-in-the-forest-f0goop",
+    "title": "Wildlife In The Forest",
+    "place": "Nature Live Camera",
+    "cat": "safari",
+    "tags": [
+      "cat",
+      "birds",
+      "wildlife",
+      "fox",
+      "animals"
+    ],
+    "yt": "F0GOOP82094",
+    "channelId": "UCRPhYF9rd5ov7DNKj99MNIg",
+    "tone": "#e8dcc6",
+    "blurb": "Welcome to the peaceful nature of Denmark.",
+    "ytTitle": "Wildlife In The Forest - 24/7 LIVE 🔴 by Morten Hilmer",
+    "auto": true,
+    "added": "2026-11-09"
+  },
+  {
+    "id": "auto-coral-city-camera-miami-s-free-r-7i8arj",
+    "title": "Coral City Camera (Miami's Free-Range",
+    "place": "Coral Morphologic",
+    "cat": "ocean",
+    "tags": [
+      "rescue",
+      "aquarium",
+      "reef",
+      "coral",
+      "fish",
+      "underwater"
+    ],
+    "yt": "7i8ARjIeM2k",
+    "channelId": "UCtllXAWa3EcfcsL5tvpqGSw",
+    "tone": "#d6e4cc",
+    "blurb": "The CCC is a non-profit citizen science art project.",
+    "ytTitle": "Coral City Camera (Miami's Free-Range Aquarium Underwater Livestream)",
+    "auto": true,
+    "added": "2026-11-09"
+  },
+  {
+    "id": "auto-sea-otter-fur-seal-cam-nqomhp",
+    "title": "sea otter / fur seal cam",
+    "place": "Seattle Aquarium",
+    "cat": "cuddly",
+    "tags": [
+      "otter",
+      "otters",
+      "aquarium",
+      "fish",
+      "seal",
+      "seals",
+      "wildlife",
+      "zoo",
+      "animal",
+      "animals"
+    ],
+    "yt": "NqOmHpwMUxs",
+    "channelId": "UCl-QNzkm3zAmoCqedCL1EPQ",
+    "tone": "#bcd3e6",
+    "blurb": "Watch sea otters (or the occasional northern fur seal—keeping reading below on why that is!) streaming live from the Seattle Aquarium!",
+    "ytTitle": "Live sea otter / fur seal cam - Seattle Aquarium",
+    "auto": true,
+    "added": "2026-11-09"
   }
 ];

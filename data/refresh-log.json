@@ -1,32 +1,34 @@
 {
   "lastRun": {
-    "ranAt": "2026-11-02T20:23:26.915Z",
-    "checked": 127,
-    "playable": 96,
+    "ranAt": "2026-11-09T20:49:03.391Z",
+    "checked": 133,
+    "playable": 104,
     "replaced": [
-      "Donkey Barn (79DfDsVJ67U → xlWrjud-JiI)",
-      "Elk Refuge (_2rvoH5oDcg → VrV76oqxvS8)",
-      "Cat Sanctuary (tEsfi0xZzUs → B7NHZhQxkzE)",
-      "Friends of Felines Rescue Center (FFRC) (VRpB_vOKbgw → iNhKMpI9Hak)"
+      "African Penguins (bV4EiHr53ek → tkh8PmqHEdA)",
+      "Woodland Pantry (47dcM4M16Ic → _NpIygAK0Lw)",
+      "Tiger Refuge (PcAOecvAh1U → e2R11FJN0QI)",
+      "Marsh Storks (XndXbnjdth0 → vyxlGNzqakQ)",
+      "Hog Island Ospreys (O6Ir_sMsTtc → ngoZMdZ_jeA)",
+      "Wolf Pack (DRxYSIoBusQ → OOT6YlOYgaU)"
     ],
     "retired": [
-      "Africa Wildlife Cam",
-      "Woodland Pantry"
+      "Lesser Kestrel Nest"
     ],
     "revived": [],
     "removed": [],
     "added": [
-      "Backyard Bird Feeder New Jersey (Holy Mount Athos Voices Greece)",
-      "Animal Ambassador Cams (Alveus Sanctuary)",
-      "Big Bear Bald Eagle Wide View (FOBBV CAM)",
-      "The Best Aquarium (4K Ocean World)",
-      "Sea Otter Cam (Vancouver Aquarium)",
-      "The Crow's Nest (TinyKittens HQ)"
+      "Deer Cam (Deer Streams)",
+      "Lions vs Leopards vs Hyenas (Nat Geo Animals)",
+      "Sea Otter Cam 2 (Vancouver Aquarium)",
+      "Wildlife In The Forest (Nature Live Camera)",
+      "Coral City Camera (Miami's Free-Range (Coral Morphologic)",
+      "sea otter / fur seal cam (Seattle Aquarium)"
     ],
     "notes": [],
     "quotaUsed": 1060,
     "diagnostics": {
       "notPlayable": [
+        "penguins-calacademy: stream ended",
         "orcas-bc: stream ended",
         "pandas-chengdu: stream ended",
         "shark-lagoon-pacific: stream ended",
@@ -34,6 +36,7 @@
         "parrots-yorkshire: stream ended",
         "reef-pennekamp: stream ended",
         "guinea-pigs-bakkeveen: stream ended",
+        "kestrels-ramat-hanadiv: stream ended",
         "sheep-texel-dunes: stream ended",
         "hula-valley-birds: stream ended",
         "de-gavers-hide: stream ended",
@@ -46,21 +49,19 @@
         "vultures-hai-bar: stream ended",
         "storks-nowy-kamien: stream ended",
         "lambs-texel: stream ended",
-        "donkeys-ipswich: stream ended",
         "goshawks-riga: stream ended",
         "plains-kenya: stream ended",
         "kittens-connecticut: stream ended",
-        "woodland-pantry-maine: deleted or private",
+        "woodland-pantry-maine: stream ended",
+        "tigers-turpentine-creek: stream ended",
         "storks-reussenkoege: stream ended",
-        "elk-refuge-jackson: embedding turned off",
         "eagles-kenai: stream ended",
+        "ospreys-hog-island: stream ended",
         "wolves-ely: stream ended",
-        "cats-ohio-feline-rescue: stream ended",
         "eagles-danube-ipoly: stream ended",
         "storks-suwalki: stream ended",
         "pigs-ruhr: stream ended",
-        "chickens-kipster: stream ended",
-        "auto-friends-of-felines-rescue-center-vrpbvo: stream ended"
+        "chickens-kipster: stream ended"
       ],
       "channelErrors": [],
       "discovery": {
@@ -74,15 +75,99 @@
         "underwater live cam fish": 25,
         "kitten live cam": 25,
         "puppy live cam": 25,
-        "_new results": 139,
-        "_playable": 139,
-        "_enough viewers": 92,
-        "_animal words": 81,
-        "_not excluded": 62
+        "_new results": 135,
+        "_playable": 135,
+        "_enough viewers": 89,
+        "_animal words": 80,
+        "_not excluded": 61
       }
     }
   },
   "history": [
+    {
+      "ranAt": "2026-11-09T20:49:03.391Z",
+      "checked": 133,
+      "playable": 104,
+      "replaced": [
+        "African Penguins (bV4EiHr53ek → tkh8PmqHEdA)",
+        "Woodland Pantry (47dcM4M16Ic → _NpIygAK0Lw)",
+        "Tiger Refuge (PcAOecvAh1U → e2R11FJN0QI)",
+        "Marsh Storks (XndXbnjdth0 → vyxlGNzqakQ)",
+        "Hog Island Ospreys (O6Ir_sMsTtc → ngoZMdZ_jeA)",
+        "Wolf Pack (DRxYSIoBusQ → OOT6YlOYgaU)"
+      ],
+      "retired": [
+        "Lesser Kestrel Nest"
+      ],
+      "revived": [],
+      "removed": [],
+      "added": [
+        "Deer Cam (Deer Streams)",
+        "Lions vs Leopards vs Hyenas (Nat Geo Animals)",
+        "Sea Otter Cam 2 (Vancouver Aquarium)",
+        "Wildlife In The Forest (Nature Live Camera)",
+        "Coral City Camera (Miami's Free-Range (Coral Morphologic)",
+        "sea otter / fur seal cam (Seattle Aquarium)"
+      ],
+      "notes": [],
+      "quotaUsed": 1060,
+      "diagnostics": {
+        "notPlayable": [
+          "penguins-calacademy: stream ended",
+          "orcas-bc: stream ended",
+          "pandas-chengdu: stream ended",
+          "shark-lagoon-pacific: stream ended",
+          "storks-brenz-castle: stream ended",
+          "parrots-yorkshire: stream ended",
+          "reef-pennekamp: stream ended",
+          "guinea-pigs-bakkeveen: stream ended",
+          "kestrels-ramat-hanadiv: stream ended",
+          "sheep-texel-dunes: stream ended",
+          "hula-valley-birds: stream ended",
+          "de-gavers-hide: stream ended",
+          "reef-predators-pacific: stream ended",
+          "griffon-vultures-israel: stream ended",
+          "donana-marshes: stream ended",
+          "garden-sheffield: stream ended",
+          "hula-lake: stream ended",
+          "booted-eagles-ports: stream ended",
+          "vultures-hai-bar: stream ended",
+          "storks-nowy-kamien: stream ended",
+          "lambs-texel: stream ended",
+          "goshawks-riga: stream ended",
+          "plains-kenya: stream ended",
+          "kittens-connecticut: stream ended",
+          "woodland-pantry-maine: stream ended",
+          "tigers-turpentine-creek: stream ended",
+          "storks-reussenkoege: stream ended",
+          "eagles-kenai: stream ended",
+          "ospreys-hog-island: stream ended",
+          "wolves-ely: stream ended",
+          "eagles-danube-ipoly: stream ended",
+          "storks-suwalki: stream ended",
+          "pigs-ruhr: stream ended",
+          "chickens-kipster: stream ended"
+        ],
+        "channelErrors": [],
+        "discovery": {
+          "animal live cam": 25,
+          "wildlife live cam": 25,
+          "zoo live cam": 25,
+          "aquarium live cam": 25,
+          "bird nest live cam": 25,
+          "bird feeder live cam": 25,
+          "safari waterhole live cam": 25,
+          "underwater live cam fish": 25,
+          "kitten live cam": 25,
+          "puppy live cam": 25,
+          "_new results": 135,
+          "_playable": 135,
+          "_enough viewers": 89,
+          "_animal words": 80,
+          "_not excluded": 61
+        }
+      }
+    },
     {
       "ranAt": "2026-11-02T20:23:26.915Z",
       "checked": 127,
