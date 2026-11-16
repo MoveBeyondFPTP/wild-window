@@ -175,7 +175,7 @@ window.WW_CAMS = [
       "colony",
       "night"
     ],
-    "yt": "Vf0i2uv4c58",
+    "yt": "PmzPqiB0jaE",
     "channelId": "UCSlIi8WXERrJUce_les6V6w",
     "tone": "#bcd3e6",
     "blurb": "The world's smallest penguins. They come ashore in rafts just after dusk.",
@@ -277,12 +277,11 @@ window.WW_CAMS = [
       "killer whale",
       "underwater"
     ],
-    "yt": "vwCXZeswQKY",
+    "yt": "hzt7mnCaYig",
     "channelId": "UCSyg9cb3Iq-NtlbxqNB9wGw",
     "tone": "#bcd3e6",
     "blurb": "An underwater cam on a pebble beach where orcas come to rub their bellies. Mostly summer and fall.",
-    "ytTitle": "Strider Rubbing Beach - Underwater powered by EXPLORE.org",
-    "retired": "2026-10-27"
+    "ytTitle": "Anacapa Ocean - Channel Islands National Park Cams powered by EXPLORE.org"
   },
   {
     "id": "otters-calvert",
@@ -1831,7 +1830,7 @@ window.WW_CAMS = [
     "channelId": "UCDodnv0cfstAmZRszqa-Xnw",
     "tone": "#f6d58e",
     "blurb": "White storks nesting on the windswept North Sea marshes.",
-    "ytTitle": "Nabu Weißstorch-Webcam Hamburg"
+    "ytTitle": "🔴 Nabu Weißstorch-Webcam Hamburg"
   },
   {
     "id": "elk-refuge-jackson",
@@ -2211,7 +2210,7 @@ window.WW_CAMS = [
       "rescue",
       "sanctuary"
     ],
-    "yt": "B7NHZhQxkzE",
+    "yt": "6Aq-E-6juTE",
     "channelId": "UClB2FZ7Qvwq0Ons_6jN1lAQ",
     "tone": "#bcd3e6",
     "blurb": "Rescued cats napping, playing and waiting for adoption.",
@@ -2515,7 +2514,7 @@ window.WW_CAMS = [
       "wildlife",
       "animal"
     ],
-    "yt": "-K-VxA6v7QM",
+    "yt": "XELu3xr35aY",
     "channelId": "UCbJ-1yM55NHrR1GS9hhPuvg",
     "tone": "#e8dcc6",
     "blurb": "Alveus is a 501(c)(3) nonprofit org functioning as a wildlife sanctuary & virtual education center, aiming to unite online users for conservation!",
@@ -2611,7 +2610,7 @@ window.WW_CAMS = [
       "deer",
       "animal"
     ],
-    "yt": "35_6IYarmgY",
+    "yt": "W8azQI76EQc",
     "channelId": "UC-ywdvCNkkYdoIsKWLHCvog",
     "tone": "#f3cdb8",
     "blurb": "Live deer cam, 24/7 whitetail deer feeding live from Canada.",
@@ -2723,5 +2722,118 @@ window.WW_CAMS = [
     "ytTitle": "Live sea otter / fur seal cam - Seattle Aquarium",
     "auto": true,
     "added": "2026-11-09"
+  },
+  {
+    "id": "auto-winter-park-eagle-cam-adimao",
+    "title": "Winter Park Eagle Cam",
+    "place": "Winter Park Eagle Cam",
+    "cat": "birds",
+    "tags": [
+      "birds",
+      "owl",
+      "eagle",
+      "eagles",
+      "nest",
+      "wildlife"
+    ],
+    "yt": "ADIMaoywNuw",
+    "channelId": "UC51tfMdZhBpyEUP_uWOC-ZA",
+    "tone": "#d9c7e8",
+    "blurb": "Welcome to the Winter Park Eagle Cam, a 24/7 window into the lives of wild bald eagles in Winter Park, Florida brought to you by Window to Wildlife.",
+    "ytTitle": "2 Eggs! | Winter Park Eagle Cam | Overhead Cam | Chat Enabled",
+    "auto": true,
+    "added": "2026-11-16"
+  },
+  {
+    "id": "auto-bald-eagle-cam-uanvtm",
+    "title": "Bald Eagle Cam",
+    "place": "American Eagle Foundation",
+    "cat": "birds",
+    "tags": [
+      "eagle",
+      "eagles",
+      "nest"
+    ],
+    "yt": "UANvTm4J18M",
+    "channelId": "UCWl9BI3rn0-YVCuWS_g2FUw",
+    "tone": "#bfd8c8",
+    "blurb": "The nest at the North East Florida Eagle Cam (NEFL) is home to bald eagle Gabrielle and Beau.",
+    "ytTitle": "NEFL Cam 1 - Live Bald Eagle Cam",
+    "auto": true,
+    "added": "2026-11-16"
+  },
+  {
+    "id": "auto-tropical-reef-camera-powered-by-dhunz4",
+    "title": "Tropical Reef Camera powered by",
+    "place": "Explore Live Nature Cams",
+    "cat": "ocean",
+    "tags": [
+      "reef",
+      "africa",
+      "animals"
+    ],
+    "yt": "DHUnz4dyb54",
+    "channelId": "UC-2KSeUU5SMCX6XLRD-AEvw",
+    "tone": "#f3cdb8",
+    "blurb": "This tropical reef exhibit is modeled after the coast of Palau and houses more than 1,000 animals.",
+    "ytTitle": "Tropical Reef Camera powered by EXPLORE.org",
+    "auto": true,
+    "added": "2026-11-16"
+  },
+  {
+    "id": "auto-daycare-for-your-dog-mnh7zd",
+    "title": "Daycare for Your Dog",
+    "place": "Tv for dogs, brought to you by Doggy Woods Retreat",
+    "cat": "cuddly",
+    "tags": [
+      "dog",
+      "dogs",
+      "birds"
+    ],
+    "yt": "mNh7ZdJOknQ",
+    "channelId": "UCYwDsHiV2NClULcVRuoRuoQ",
+    "tone": "#f6d58e",
+    "blurb": "24/7 Dog Daycare • Pack Walks • Forest & Field Play Your dog is officially invited to join the pack — anytime, day or night.",
+    "ytTitle": "Daycare for Your Dog 24/7 — Doggy Woods Retreat Live DogTV Season 1",
+    "auto": true,
+    "added": "2026-11-16"
+  },
+  {
+    "id": "auto-at-the-okaukuejo-waterhole-in-et-aemudo",
+    "title": "at the Okaukuejo waterhole in Etosha",
+    "place": "NamibiaCam",
+    "cat": "safari",
+    "tags": [
+      "safari",
+      "waterhole",
+      "elephants",
+      "lions",
+      "giraffes",
+      "wildlife"
+    ],
+    "yt": "AeMUdOPFcXI",
+    "channelId": "UC9X6gGKDv2yhMoofoeS7-Gg",
+    "tone": "#c9d6e8",
+    "blurb": "More NamibiaCam: 🇳🇦 Book NamibiaCam Tour: Immerse yourself in the wonder of the Okaukuejo Waterhole in Etosha National Park, Namibia: Your Gateway to the Untamed!",
+    "ytTitle": "Namibia: Live stream at the Okaukuejo waterhole in Etosha National Park, Namibia",
+    "auto": true,
+    "added": "2026-11-16"
+  },
+  {
+    "id": "auto-kitten-academy-t4xzmm",
+    "title": "Kitten Academy",
+    "place": "Kitten Academy",
+    "cat": "cuddly",
+    "tags": [
+      "kitten",
+      "cats"
+    ],
+    "yt": "T4XZmMPQ9Kw",
+    "channelId": "UC83RKJs4eKHVE9v0YUyqzgg",
+    "tone": "#e8dcc6",
+    "blurb": "Kitten Academy has moved to Pennsylvania!",
+    "ytTitle": "Kitten Academy Live Stream",
+    "auto": true,
+    "added": "2026-11-16"
   }
 ];
