@@ -377,7 +377,8 @@ window.WW_CAMS = [
     "channelId": "UCB4RSGRBhM670UlcG-oCxeA",
     "tone": "#f3cdb8",
     "blurb": "The world's most relaxed rodents, doing very little, very well.",
-    "ytTitle": "Capybara Live stream"
+    "ytTitle": "Capybara Live stream",
+    "retired": "2026-11-23"
   },
   {
     "id": "giraffes-melbourne",
@@ -494,7 +495,8 @@ window.WW_CAMS = [
     "channelId": "UCTkfwW5CMZjlx2R4_iCAZ_w",
     "tone": "#f3cdb8",
     "blurb": "City foxes visiting a Dublin garden, mostly at dawn and dusk.",
-    "ytTitle": "Foxheaven Dublin Ireland Livestream"
+    "ytTitle": "Foxheaven Dublin Ireland Livestream",
+    "retired": "2026-11-23"
   },
   {
     "id": "kittens-langley",
@@ -877,12 +879,11 @@ window.WW_CAMS = [
       "falcon",
       "nest"
     ],
-    "yt": "MeKqyV8Hpn4",
+    "yt": "vXKPXLE-hYw",
     "channelId": "UCzbydNAcB7jeJGssRFb_dCA",
     "tone": "#f3cdb8",
     "blurb": "Lesser kestrels, tiny falcons, nesting in a nature park.",
-    "ytTitle": "6 Live Birdcams | One Stream • Real Wildlife 24/7 – Charter Group Birdcams",
-    "retired": "2026-11-09"
+    "ytTitle": "6 Live Birdcams | One Stream • Real Wildlife 24/7 – Charter Group Birdcams"
   },
   {
     "id": "sheep-texel-dunes",
@@ -1409,7 +1410,7 @@ window.WW_CAMS = [
       "farm",
       "barn"
     ],
-    "yt": "xlWrjud-JiI",
+    "yt": "e5oTqFyMKSM",
     "channelId": "UCGb_c0j3vHX1cJNYhhiAKYA",
     "tone": "#e8dcc6",
     "blurb": "Fuzzy donkeys hanging out in their barn.",
@@ -1709,12 +1710,11 @@ window.WW_CAMS = [
       "cats",
       "play"
     ],
-    "yt": "r3YdBqqDLQk",
+    "yt": "lSGLULlTZHk",
     "channelId": "UC83RKJs4eKHVE9v0YUyqzgg",
     "tone": "#e8dcc6",
     "blurb": "Young kittens tumbling, pouncing and napping in a playroom.",
-    "ytTitle": "Kitten Academy Live Stream",
-    "retired": "2026-10-27"
+    "ytTitle": "Kitten Academy Live Stream"
   },
   {
     "id": "bears-libearty",
@@ -2610,7 +2610,7 @@ window.WW_CAMS = [
       "deer",
       "animal"
     ],
-    "yt": "W8azQI76EQc",
+    "yt": "2b4RnPasgmw",
     "channelId": "UC-ywdvCNkkYdoIsKWLHCvog",
     "tone": "#f3cdb8",
     "blurb": "Live deer cam, 24/7 whitetail deer feeding live from Canada.",
@@ -2834,6 +2834,125 @@ window.WW_CAMS = [
     "blurb": "Kitten Academy has moved to Pennsylvania!",
     "ytTitle": "Kitten Academy Live Stream",
     "auto": true,
-    "added": "2026-11-16"
+    "added": "2026-11-16",
+    "retired": "2026-11-23"
+  },
+  {
+    "id": "auto-furball-farm-cat-sanctuary-jmrzmm",
+    "title": "Furball Farm Cat Sanctuary",
+    "place": "Furball Farm Cat Sanctuary",
+    "cat": "cuddly",
+    "tags": [
+      "cat",
+      "farm",
+      "sanctuary"
+    ],
+    "yt": "JmrzmmUD_es",
+    "channelId": "UCCBtzQdyjuJci9uqDF3lpZQ",
+    "tone": "#d6e4cc",
+    "blurb": "*superchat dispense only for now!",
+    "ytTitle": "Furball Farm Cat Sanctuary 24/7!",
+    "auto": true,
+    "added": "2026-11-23"
+  },
+  {
+    "id": "auto-beautiful-coral-reef-fish-video-thnf0i",
+    "title": "Beautiful Coral Reef Fish Video",
+    "place": "4K Ocean World",
+    "cat": "ocean",
+    "tags": [
+      "aquarium",
+      "reef",
+      "coral",
+      "fish",
+      "dolphins",
+      "underwater"
+    ],
+    "yt": "THnF0IQ8JJM",
+    "channelId": "UCkwi3H7xoYTJKycMI9YAn0w",
+    "tone": "#bcd3e6",
+    "blurb": "THE DEEP OCEAN | 4K TV ULTRA HD / Full Documentary - Beautiful Coral Reef Fish Video - Stress Relief Embark on an immersive journey into the mysterious depths…",
+    "ytTitle": "THE DEEP OCEAN | 4K TV ULTRA HD / Full Documentary - Beautiful Coral Reef Fish Video - Stress Relief",
+    "auto": true,
+    "added": "2026-11-23"
+  },
+  {
+    "id": "auto-boreal-birds-at-the-ontario-feed-wtvdrt",
+    "title": "Boreal Birds at the Ontario FeederWatch",
+    "place": "Cornell Lab Bird Cams",
+    "cat": "birds",
+    "tags": [
+      "bird",
+      "birds",
+      "hummingbirds",
+      "feeder",
+      "wildlife"
+    ],
+    "yt": "wTVDrtShk7Y",
+    "channelId": "UCZXZQxS3d6NpR-eH_gdDwYA",
+    "tone": "#d9c7e8",
+    "blurb": "---- Watch online with highlight clips and information about the birds at Thanks to Perky-Pet for helping to make the Ontario FeederWatch Cam possible!",
+    "ytTitle": "Live Boreal Birds at the Ontario FeederWatch Cam! Cornell Lab | Powered by Perky-Pet",
+    "auto": true,
+    "added": "2026-11-23"
+  },
+  {
+    "id": "auto-okaukuejo-resort-wildlife-waterh-jmmorw",
+    "title": "Okaukuejo Resort, Wildlife Waterhole",
+    "place": "Namibia Wildlife Resorts",
+    "cat": "safari",
+    "tags": [
+      "waterhole",
+      "africa",
+      "elephant",
+      "elephants",
+      "lions",
+      "giraffe",
+      "giraffes",
+      "zebra",
+      "savannah",
+      "wildlife"
+    ],
+    "yt": "JMMoRwYo5kE",
+    "channelId": "UCfn4vrrgKXCCg3rxxLRGOvg",
+    "tone": "#bfd8c8",
+    "blurb": "This live wildlife video camera is situated at NWR Okaukuejo Resort Wildlife Waterhole in the Etosha National Park in Namibia.",
+    "ytTitle": "Okaukuejo Resort, Wildlife Waterhole: Live camera stream in the Etosha National Park in Namibia",
+    "auto": true,
+    "added": "2026-11-23"
+  },
+  {
+    "id": "auto-sacramento-national-wildlife-ref-1aphtr",
+    "title": "Sacramento National Wildlife Refuge",
+    "place": "Explore Hummingbird & Bird Migration Cams",
+    "cat": "safari",
+    "tags": [
+      "wildlife",
+      "deer"
+    ],
+    "yt": "1aPhtRjjzb0",
+    "channelId": "UCpLLHFUEHb89Luv-Gj6ZMgA",
+    "tone": "#f3cdb8",
+    "blurb": "Explore one of the most vital links in the Pacific Flyway.",
+    "ytTitle": "LIVE Pacific Flyway Cam: Sacramento National Wildlife Refuge – CA | explore.org",
+    "auto": true,
+    "added": "2026-11-23"
+  },
+  {
+    "id": "auto-hippo-cove-front-cam-srqufo",
+    "title": "Hippo Cove Front Cam",
+    "place": "The Cincinnati Zoo & Botanical Garden",
+    "cat": "safari",
+    "tags": [
+      "hippo",
+      "zoo"
+    ],
+    "yt": "Sr_quFooKEs",
+    "channelId": "UCE3VoxyYmyQCReOXk2ogsVg",
+    "tone": "#f6d58e",
+    "blurb": "Watch Bibi, Fiona, Tucker, and Fritz in Hippo Cove at the Cincinnati Zoo & Botanical Garden.",
+    "ytTitle": "Hippo Cove Front Live Cam",
+    "auto": true,
+    "added": "2026-11-23"
   }
 ];

@@ -1,33 +1,36 @@
 {
   "lastRun": {
-    "ranAt": "2026-11-16T20:32:14.293Z",
-    "checked": 139,
-    "playable": 111,
+    "ranAt": "2026-11-23T22:04:51.969Z",
+    "checked": 145,
+    "playable": 116,
     "replaced": [
-      "Little Blue Penguins (Vf0i2uv4c58 → PmzPqiB0jaE)",
-      "Orca Rubbing Beach (vwCXZeswQKY → hzt7mnCaYig)",
-      "Cat Sanctuary (B7NHZhQxkzE → 6Aq-E-6juTE)",
-      "Animal Ambassador Cams (-K-VxA6v7QM → XELu3xr35aY)",
-      "Deer Cam (35_6IYarmgY → W8azQI76EQc)"
+      "Lesser Kestrel Nest (MeKqyV8Hpn4 → vXKPXLE-hYw)",
+      "Donkey Barn (xlWrjud-JiI → e5oTqFyMKSM)",
+      "Kitten Playroom (r3YdBqqDLQk → lSGLULlTZHk)",
+      "Deer Cam (W8azQI76EQc → 2b4RnPasgmw)"
     ],
-    "retired": [],
+    "retired": [
+      "Capybaras",
+      "Urban Red Foxes",
+      "Kitten Academy"
+    ],
     "revived": [],
     "removed": [],
     "added": [
-      "Winter Park Eagle Cam (Winter Park Eagle Cam)",
-      "Bald Eagle Cam (American Eagle Foundation)",
-      "Tropical Reef Camera powered by (Explore Live Nature Cams)",
-      "Daycare for Your Dog (Tv for dogs, brought to you by Doggy Woods Retreat)",
-      "at the Okaukuejo waterhole in Etosha (NamibiaCam)",
-      "Kitten Academy (Kitten Academy)"
+      "Furball Farm Cat Sanctuary (Furball Farm Cat Sanctuary)",
+      "Beautiful Coral Reef Fish Video (4K Ocean World)",
+      "Boreal Birds at the Ontario FeederWatch (Cornell Lab Bird Cams)",
+      "Okaukuejo Resort, Wildlife Waterhole (Namibia Wildlife Resorts)",
+      "Sacramento National Wildlife Refuge (Explore Hummingbird & Bird Migration Cams)",
+      "Hippo Cove Front Cam (The Cincinnati Zoo & Botanical Garden)"
     ],
     "notes": [],
     "quotaUsed": 1056,
     "diagnostics": {
       "notPlayable": [
-        "blue-penguins-oamaru: stream ended",
-        "orcas-bc: stream ended",
         "pandas-chengdu: stream ended",
+        "capybaras-taronga: stream ended",
+        "foxes-dublin: stream ended",
         "shark-lagoon-pacific: stream ended",
         "storks-brenz-castle: stream ended",
         "parrots-yorkshire: stream ended",
@@ -46,17 +49,17 @@
         "vultures-hai-bar: stream ended",
         "storks-nowy-kamien: stream ended",
         "lambs-texel: stream ended",
+        "donkeys-ipswich: stream ended",
         "goshawks-riga: stream ended",
         "plains-kenya: stream ended",
         "kittens-connecticut: stream ended",
         "eagles-kenai: stream ended",
-        "cats-ohio-feline-rescue: stream ended",
         "eagles-danube-ipoly: stream ended",
         "storks-suwalki: stream ended",
         "pigs-ruhr: stream ended",
         "chickens-kipster: stream ended",
-        "auto-animal-ambassador-cams-kvxa6v: deleted or private",
-        "auto-deer-cam-356iya: stream ended"
+        "auto-deer-cam-356iya: stream ended",
+        "auto-kitten-academy-t4xzmm: stream ended"
       ],
       "channelErrors": [],
       "discovery": {
@@ -72,13 +75,95 @@
         "puppy live cam": 25,
         "_new results": 136,
         "_playable": 136,
-        "_enough viewers": 82,
-        "_animal words": 71,
-        "_not excluded": 54
+        "_enough viewers": 80,
+        "_animal words": 68,
+        "_not excluded": 52
       }
     }
   },
   "history": [
+    {
+      "ranAt": "2026-11-23T22:04:51.969Z",
+      "checked": 145,
+      "playable": 116,
+      "replaced": [
+        "Lesser Kestrel Nest (MeKqyV8Hpn4 → vXKPXLE-hYw)",
+        "Donkey Barn (xlWrjud-JiI → e5oTqFyMKSM)",
+        "Kitten Playroom (r3YdBqqDLQk → lSGLULlTZHk)",
+        "Deer Cam (W8azQI76EQc → 2b4RnPasgmw)"
+      ],
+      "retired": [
+        "Capybaras",
+        "Urban Red Foxes",
+        "Kitten Academy"
+      ],
+      "revived": [],
+      "removed": [],
+      "added": [
+        "Furball Farm Cat Sanctuary (Furball Farm Cat Sanctuary)",
+        "Beautiful Coral Reef Fish Video (4K Ocean World)",
+        "Boreal Birds at the Ontario FeederWatch (Cornell Lab Bird Cams)",
+        "Okaukuejo Resort, Wildlife Waterhole (Namibia Wildlife Resorts)",
+        "Sacramento National Wildlife Refuge (Explore Hummingbird & Bird Migration Cams)",
+        "Hippo Cove Front Cam (The Cincinnati Zoo & Botanical Garden)"
+      ],
+      "notes": [],
+      "quotaUsed": 1056,
+      "diagnostics": {
+        "notPlayable": [
+          "pandas-chengdu: stream ended",
+          "capybaras-taronga: stream ended",
+          "foxes-dublin: stream ended",
+          "shark-lagoon-pacific: stream ended",
+          "storks-brenz-castle: stream ended",
+          "parrots-yorkshire: stream ended",
+          "reef-pennekamp: stream ended",
+          "guinea-pigs-bakkeveen: stream ended",
+          "kestrels-ramat-hanadiv: stream ended",
+          "sheep-texel-dunes: stream ended",
+          "hula-valley-birds: stream ended",
+          "de-gavers-hide: stream ended",
+          "reef-predators-pacific: stream ended",
+          "griffon-vultures-israel: stream ended",
+          "donana-marshes: stream ended",
+          "garden-sheffield: stream ended",
+          "hula-lake: stream ended",
+          "booted-eagles-ports: stream ended",
+          "vultures-hai-bar: stream ended",
+          "storks-nowy-kamien: stream ended",
+          "lambs-texel: stream ended",
+          "donkeys-ipswich: stream ended",
+          "goshawks-riga: stream ended",
+          "plains-kenya: stream ended",
+          "kittens-connecticut: stream ended",
+          "eagles-kenai: stream ended",
+          "eagles-danube-ipoly: stream ended",
+          "storks-suwalki: stream ended",
+          "pigs-ruhr: stream ended",
+          "chickens-kipster: stream ended",
+          "auto-deer-cam-356iya: stream ended",
+          "auto-kitten-academy-t4xzmm: stream ended"
+        ],
+        "channelErrors": [],
+        "discovery": {
+          "animal live cam": 25,
+          "wildlife live cam": 25,
+          "zoo live cam": 25,
+          "aquarium live cam": 25,
+          "bird nest live cam": 25,
+          "bird feeder live cam": 25,
+          "safari waterhole live cam": 25,
+          "underwater live cam fish": 25,
+          "kitten live cam": 25,
+          "puppy live cam": 25,
+          "_new results": 136,
+          "_playable": 136,
+          "_enough viewers": 80,
+          "_animal words": 68,
+          "_not excluded": 52
+        }
+      }
+    },
     {
       "ranAt": "2026-11-16T20:32:14.293Z",
       "checked": 139,
